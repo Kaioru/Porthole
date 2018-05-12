@@ -43,11 +43,35 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
+    <Content Include="Template.master" />
+    <Content Include="Assets\css\spectre-exp.css" />
+    <Content Include="Assets\css\spectre-exp.min.css" />
+    <Content Include="Assets\css\spectre-icons.css" />
+    <Content Include="Assets\css\spectre-icons.min.css" />
+    <Content Include="Assets\css\spectre.css" />
+    <Content Include="Assets\css\spectre.min.css" />
+    <Content Include="Assets\css\main.css" />
+    <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Template.master.cs">
+      <DependentUpon>Template.master</DependentUpon>
+    </Compile>
+    <Compile Include="Template.master.designer.cs">
+      <DependentUpon>Template.master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
