@@ -42,36 +42,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="Global.asax" />
-    <Content Include="Template.master" />
-    <Content Include="Assets\css\spectre-exp.css" />
-    <Content Include="Assets\css\spectre-exp.min.css" />
-    <Content Include="Assets\css\spectre-icons.css" />
-    <Content Include="Assets\css\spectre-icons.min.css" />
-    <Content Include="Assets\css\spectre.css" />
-    <Content Include="Assets\css\spectre.min.css" />
     <Content Include="Assets\css\main.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Assets\css\ext\spectre.css" />
+    <Content Include="Assets\css\ext\spectre.min.css" />
+    <Content Include="Assets\css\ext\spectre-exp.css" />
+    <Content Include="Assets\css\ext\spectre-exp.min.css" />
+    <Content Include="Assets\css\ext\spectre-icons.css" />
+    <Content Include="Assets\css\ext\spectre-icons.min.css" />
+    <Content Include="Layout\Global.asax" />
+    <Content Include="Layout\Template.master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Template.master.cs">
-      <DependentUpon>Template.master</DependentUpon>
-    </Compile>
-    <Compile Include="Template.master.designer.cs">
-      <DependentUpon>Template.master</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Layout\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Template.master.cs">
+      <DependentUpon>Template.master</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Template.master.designer.cs">
+      <DependentUpon>Template.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Assets\css\ext\" />
+    <Folder Include="Layout\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

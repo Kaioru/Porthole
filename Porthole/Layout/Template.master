@@ -4,12 +4,12 @@
 <head runat="server">
 	<title>Porthole</title>
 
-    <link rel="stylesheet" href="Assets/css/spectre.min.css">
-    <link rel="stylesheet" href="Assets/css/spectre-exp.min.css">
-    <link rel="stylesheet" href="Assets/css/spectre-icons.min.css">
+    <link rel="stylesheet" href="../Assets/css/ext/spectre.min.css">
+    <link rel="stylesheet" href="../Assets/css/ext/spectre-exp.min.css">
+    <link rel="stylesheet" href="../Assets/css/ext/spectre-icons.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="stylesheet" href="../Assets/css/main.css">
 </head>
 <body>
 <header class="navbar">
