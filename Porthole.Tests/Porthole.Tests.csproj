@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1CF35CE5-3BCB-499E-9584-06917ACC3476}</ProjectGuid>
+    <ProjectGuid>{F4EA153C-B2CF-44B1-A7E9-EA1E33C2F09D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Porthole.Tests</RootNamespace>
     <AssemblyName>Porthole.Tests</AssemblyName>
@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Porthole\Porthole.csproj">
-      <Project>{E15FFF33-549A-45A9-BEA5-7F28A0AA5B8B}</Project>
+      <Project>{66CB0AC1-EDC2-48ED-950F-D446012CC6A2}</Project>
       <Name>Porthole</Name>
     </ProjectReference>
   </ItemGroup>
