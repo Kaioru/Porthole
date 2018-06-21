@@ -39,6 +39,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -52,6 +54,7 @@
     <Content Include="Assets\css\ext\spectre-icons.min.css" />
     <Content Include="Layout\Global.asax" />
     <Content Include="Layout\Template.master" />
+    <Content Include="Web.Debug.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">

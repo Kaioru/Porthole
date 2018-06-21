@@ -29,6 +29,9 @@ test-results/
 Thumbs.db
 .vs/
 
+*.Debug.*
+*.Release.*
+
 # Mac bundle stuff
 *.dmg
 *.app
