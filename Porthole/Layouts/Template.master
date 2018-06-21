@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" Inherits="Porthole.Layouts.Template" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Porthole</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="../Assets/css/ext/spectre.min.css">
+    <link rel="stylesheet" href="../Assets/css/ext/spectre-exp.min.css">
+    <link rel="stylesheet" href="../Assets/css/ext/spectre-icons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/css/main.css">
+</head>
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="" class="navbar-brand mr-2">Porthole</a>
+            <a href="" class="btn btn-link">Portfolios</a>
+            <a href="" class="btn btn-link">Projects</a>
+        </section>
+    </header>
+    <div id="container" class="content">
+        <div class="container">
+            <form runat="server">
+                <asp:ContentPlaceHolder id="cphMain" runat="server" /> 
+            </form>
+        </div>
+         <div class="container">
+            <footer>
+                <div class="divider"></div>
+                <p>made with
+                    <span class="text-error">♥</span> by
+                    <a href="https://github.com/kaioru" target="_blank">kaioru</a>, 
+                    <a href="https://github.com/bokiex" target="_blank">bokiex</a> and 
+                    <a href="https://github.com/DeuxEnigma" target="_blank">deuxenigma</a>.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
