@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" ClassName="Porthole.Layouts.Footer" %>
 <footer>
     <div class="divider"></div>
-    <p>made with
+    <p class="text-muted">made with
         <span class="text-error">♥</span> by
         <a href="https://github.com/kaioru" target="_blank">kaioru</a>, 
         <a href="https://github.com/bokiex" target="_blank">bokiex</a> and 
