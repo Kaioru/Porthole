@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Porthole.Models
 {
-    public class Student
+	public class Student : Account
     {
 		[Key]
 		[Column("StudentID")]
@@ -18,9 +18,10 @@ namespace Porthole.Models
 		[Column("ExternalLink")]
 		public string URL { get; set; }
 		public string Status { get; set; }
+
 		[Column("EmailAddr")]
-		public string EmailAddress { get; set; }
-		public string Password { get; set; }
+        public string EmailAddress { get; set; }
+        public string Password { get; set; }
       
 		public Mentor Mentor { get; set; }
 		public ICollection<StudentSkillSet> StudentSkillSets { get; set; }

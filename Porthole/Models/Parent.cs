@@ -5,14 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Porthole.Models
 {
-    public class Parent
+	public class Parent : Account
     {
 		[Key]
         [Column("ParentID")]
         public int ID { get; set; }
         [Column("ParentName")]
         public string Name { get; set; }
-        [Column("EmailAddr")]
+        
+		[Column("EmailAddr")]
         public string EmailAddress { get; set; }
         public string Password { get; set; }
 

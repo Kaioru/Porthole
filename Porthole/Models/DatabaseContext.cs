@@ -21,12 +21,12 @@ namespace Porthole.Models
 			            .HasKey(m => new { m.StudentID, m.ProjectID });
         }
 
-		public virtual DbSet<Student> Students { get; set; }
-		public virtual DbSet<Mentor> Mentors { get; set; }
-		public virtual DbSet<Parent> Parents { get; set; }
-		public virtual DbSet<Project> Projects { get; set; }
-		public virtual DbSet<SkillSet> SkillSets { get; set; }
-		public virtual DbSet<Suggestion> Suggestions { get; set; }
-		public virtual DbSet<ViewingRequest> Requests { get; set; }
+		public virtual DbSet<Student> Student { get; set; }
+		public virtual DbSet<Mentor> Mentor { get; set; }
+		public virtual DbSet<Parent> Parent { get; set; }
+		public virtual DbSet<Project> Project { get; set; }
+		public virtual DbSet<SkillSet> SkillSet { get; set; }
+		public virtual DbSet<Suggestion> Suggestion { get; set; }
+		public virtual DbSet<ViewingRequest> Request { get; set; }
     }
 }
