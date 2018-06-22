@@ -55,58 +55,72 @@
             <div><%= Markdown.ToHtml(CurrentStudent.Description) %></div>
         </div>
 
-        <div class="container">
-            <a id="skills"></a>
-            <h2>skills</h2>
-            <% foreach (var pivot in CurrentStudent.StudentSkillSets) { %>
-                <% var skillset = pivot.SkillSet; %>
-                <div class="chip">
-                    <img src="" class="avatar avatar-sm"> <%= skillset.Name %>
-                </div>
-            <% } %>
-        </div>
+        <% if (CurrentStudent.Achievement != null) { %>
+            <div class="container">
+                <a id="achievements"></a>
+                <h2>achievements</h2>
+                <div><%= Markdown.ToHtml(CurrentStudent.Achievement) %></div>
+            </div>
+        <% } %>
 
-        <div class="container">
-            <a id="projects"></a>
-            <h2>projects</h2>
-            <% foreach (var pivot in CurrentStudent.ProjectMembers) { %>
-                <% var project = pivot.Project; %>
-                <div class="tile">
-                    <div class="tile-icon">
-                        <figure class="avatar avatar-lg">
-                            <img src="<%= project.Poster %>" />
-                        </figure>
+        <% if (CurrentStudent.StudentSkillSets.Count > 0) { %>
+            <div class="container">
+                <a id="skills"></a>
+                <h2>skills</h2>
+                <% foreach (var pivot in CurrentStudent.StudentSkillSets) { %>
+                    <% var skillset = pivot.SkillSet; %>
+                    <div class="chip">
+                        <img src="" class="avatar avatar-sm"> <%= skillset.Name %>
                     </div>
-                    <div class="tile-content">
-                        <p class="tile-title"><%= project.Title %>
-                            <% if (pivot.Role.Equals("Leader")) { %>
-                            &nbsp;
-                            <small>
-                                <span class="chip">Owner</span>
-                            </small>
-                            <% } %>
-                        </p>
-                        <p class="tile-subtitle text-gray"><%= project.Description %></p>
-                        <div class="d-inline">
-                            <a href="Project.aspx?id=<%= project.ID %>" class="btn">visit project page</a>
+                <% } %>
+            </div>
+        <% } %>
+
+        <% if (CurrentStudent.ProjectMembers.Count > 0) { %>
+            <div class="container">
+                <a id="projects"></a>
+                <h2>projects</h2>
+                <% foreach (var pivot in CurrentStudent.ProjectMembers) { %>
+                    <% var project = pivot.Project; %>
+                    <div class="tile">
+                        <div class="tile-icon">
+                            <figure class="avatar avatar-lg">
+                                <img src="<%= project.Poster %>" />
+                            </figure>
+                        </div>
+                        <div class="tile-content">
+                            <p class="tile-title"><%= project.Title %>
+                                <% if (pivot.Role.Equals("Leader")) { %>
+                                &nbsp;
+                                <small>
+                                    <span class="chip">Owner</span>
+                                </small>
+                                <% } %>
+                            </p>
+                            <p class="tile-subtitle text-gray"><%= project.Description %></p>
+                            <div class="d-inline">
+                                <a href="Project.aspx?id=<%= project.ID %>" class="btn">visit project page</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <% } %>
-        </div>
+                <% } %>
+            </div>
+        <% } %>
 
-        <div class="container">
-            <a id="contact"></a>
-            <h2>contact</h2>
-            <div class="tile">
-                <div class="tile-icon">
-                    <i class="far fa-file"></i>
-                </div>
-                <div class="tile-content">
-                    <a href="<%= CurrentStudent.URL %>" target="_blank" class="tile-subtitle"><%= CurrentStudent.URL %></a>
+        <% if (CurrentStudent.URL != null) { %>
+            <div class="container">
+                <a id="contact"></a>
+                <h2>contact</h2>
+                <div class="tile">
+                    <div class="tile-icon">
+                        <i class="far fa-file"></i>
+                    </div>
+                    <div class="tile-content">
+                        <a href="<%= CurrentStudent.URL %>" target="_blank" class="tile-subtitle"><%= CurrentStudent.URL %></a>
+                    </div>
                 </div>
             </div>
-        </div>
+        <% } %>
 
         <div class="container">
             <%@ Register Src="Layouts/Footer.ascx" TagName="Footer" TagPrefix="partial" %> 
