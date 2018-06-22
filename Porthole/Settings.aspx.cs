@@ -15,8 +15,8 @@ namespace Porthole
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			this.Account = (IAccount)Session["Account"];
-   
-			if (Account is Student) {
+
+			if (Account is Models.Student) {
 				this.AccountType = "student";
 				this.Options.Add(new SettingsOption
 				{
