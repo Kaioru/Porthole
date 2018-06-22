@@ -150,6 +150,8 @@
     <Content Include="Login.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="Layouts\DefaultTemplate.master" />
+    <Content Include="Projects.aspx" />
+    <Content Include="Project.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -195,6 +197,18 @@
     </Compile>
     <Compile Include="Layouts\DefaultTemplate.master.designer.cs">
       <DependentUpon>DefaultTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

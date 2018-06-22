@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
 <header class="navbar">
     <section class="navbar-section">
-        <a href="" class="navbar-brand mr-2">Porthole</a>
-        <a href="" class="btn btn-link">Portfolios</a>
-        <a href="" class="btn btn-link">Projects</a>
+        <a href="Students.aspx" class="navbar-brand mr-2">Porthole</a>
+        <a href="Students.aspx" class="btn btn-link">Portfolios</a>
+        <a href="Projects.aspx" class="btn btn-link">Projects</a>
     </section>
     <section class="navbar-section">
         <% if (Account == null) { %>
