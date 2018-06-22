@@ -71,13 +71,8 @@
     </div>
 
     <div class="container">
-        <footer>
-            <div class="divider"></div>
-            <p>made with
-                <span class="text-error">♥</span> by
-                <a href="https://github.com/kaioru" target="_blank">kaioru</a>,
-                <a href="https://github.com/bokiex" target="_blank">bokiex</a>.</p>
-        </footer>
+        <%@ Register Src="Layouts/Footer.ascx" TagName="Footer" TagPrefix="partial" %> 
+        <partial:Footer runat="server" />
     </div>
 </div>
 </asp:Content>

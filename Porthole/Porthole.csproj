@@ -152,6 +152,7 @@
     <Content Include="Layouts\DefaultTemplate.master" />
     <Content Include="Projects.aspx" />
     <Content Include="Project.aspx" />
+    <Content Include="Layouts\Footer.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
