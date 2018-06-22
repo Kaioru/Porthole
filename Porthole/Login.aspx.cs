@@ -25,7 +25,7 @@ namespace Porthole
 
 				if (account != null) {
 					Session["Account"] = account;
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Students.aspx");
 				} else {
 					lblError.Text = "wrong email or password! check your privileges again, sir.";
 				}

@@ -156,6 +156,7 @@
     <Content Include="Projects.aspx" />
     <Content Include="Project.aspx" />
     <Content Include="Layouts\Footer.ascx" />
+    <Content Include="Settings.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -213,6 +214,12 @@
     </Compile>
     <Compile Include="Project.aspx.designer.cs">
       <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

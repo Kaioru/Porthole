@@ -11,9 +11,9 @@
             <a href="Login.aspx" class="btn">Login</a>
         <% } else { %>
             <div class="btn-list">
-                <a href="settings.html" class="btn">
+                <a href="Settings.aspx" class="btn">
                     <i class="fas fa-user"></i>&nbsp;<%= Account.EmailAddress %></a>
-                <a href="settings.html" class="btn">
+                <a href="Settings.aspx" class="btn">
                     <i class="fas fa-cog"></i>
                 </a>
             </div>
