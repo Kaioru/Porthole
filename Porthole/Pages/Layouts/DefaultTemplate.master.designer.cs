@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 
 namespace Porthole.Pages.Layouts {
-    
-    
-    public partial class DefaultTemplate {
-        
-        protected System.Web.UI.WebControls.Content Content1;
-        
-        protected System.Web.UI.WebControls.ContentPlaceHolder cphContent;
-    }
+	
+	
+	public partial class DefaultTemplate {
+		
+		protected System.Web.UI.WebControls.Content Content1;
+		
+		protected System.Web.UI.WebControls.ContentPlaceHolder cphContent;
+	}
 }
