@@ -51,7 +51,8 @@
         <div class="container">
             <a id="about"></a>
             <h2>about</h2>
-            <p><%= CurrentStudent.Description %></p>
+            <%@ Import Namespace="Markdig" %>
+            <div><%= Markdown.ToHtml(CurrentStudent.Description) %></div>
         </div>
 
         <div class="container">
