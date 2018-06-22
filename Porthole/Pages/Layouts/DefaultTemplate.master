@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
 <header class="navbar">
     <section class="navbar-section">
-        <a href="Students.aspx" class="navbar-brand mr-2">Porthole</a>
-        <a href="Students.aspx" class="btn btn-link">Portfolios</a>
-        <a href="Projects.aspx" class="btn btn-link">Projects</a>
+        <a href="/Pages/Students.aspx" class="navbar-brand mr-2">Porthole</a>
+        <a href="/Pages/Students.aspx" class="btn btn-link">Portfolios</a>
+        <a href="/Pages/Projects.aspx" class="btn btn-link">Projects</a>
     </section>
     <section class="navbar-section">
         <% if (Account == null) { %>
@@ -19,7 +19,7 @@
                         <li class="menu-item"><a href="/Pages/Logout.aspx">Logout</a></li>
                     </ul>
                 </div>
-                <a href="Settings.aspx">
+                <a href="/Pages/Settings.aspx">
                     <i class="fas fa-cog"></i>
                 </a>
             </div>
