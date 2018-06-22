@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
 
-namespace Porthole
+namespace Porthole.Pages
 {
 	public partial class Project : System.Web.UI.Page
     {

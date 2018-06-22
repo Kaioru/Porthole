@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/Template.master" Inherits="Porthole.Project" CodeBehind="~/Project.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/Template.master" Inherits="Porthole.Pages.Project" CodeBehind="~/Project.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
 <div class="headbar">
     <div class="tile tile-centered">

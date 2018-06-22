@@ -5,7 +5,7 @@ using System.Web.UI;
 using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
 
-namespace Porthole
+namespace Porthole.Pages
 {
     public partial class Student : System.Web.UI.Page
     {

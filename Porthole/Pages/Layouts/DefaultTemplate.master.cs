@@ -3,7 +3,7 @@ using System.Web;
 using System.Web.UI;
 using Porthole.Models;
 
-namespace Porthole.Layouts
+namespace Porthole.Pages.Layouts
 {
     public partial class DefaultTemplate : System.Web.UI.MasterPage
     {

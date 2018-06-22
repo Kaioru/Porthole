@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.UI;
 
-namespace Porthole
+namespace Porthole.Pages
 {   
     public partial class Logout : System.Web.UI.Page
     {

@@ -6,7 +6,7 @@ using System.Web.UI;
 using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
 
-namespace Porthole
+namespace Porthole.Pages 
 {   
     public partial class Projects : System.Web.UI.Page
     {

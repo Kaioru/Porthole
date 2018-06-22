@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" ClassName="Porthole.Layouts.Footer" %>
+﻿<%@ Control Language="C#" ClassName="Porthole.Pages.Layouts.Footer" %>
 <footer>
     <div class="divider"></div>
     <p class="text-gray">made with

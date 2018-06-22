@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.UI;
 using Porthole.Models;
 
-namespace Porthole
+namespace Porthole.Pages
 {
 	public partial class Settings : System.Web.UI.Page
 	{

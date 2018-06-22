@@ -8,13 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole.Layouts {
-	
-	
-	public partial class DefaultTemplate {
-		
-		protected System.Web.UI.WebControls.Content Content1;
-		
-		protected System.Web.UI.WebControls.ContentPlaceHolder cphContent;
-	}
+namespace Porthole.Pages {
+    
+    
+    public partial class Projects {
+        
+        protected System.Web.UI.WebControls.Content Content1;
+    }
 }

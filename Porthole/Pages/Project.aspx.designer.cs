@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole {
-	
-	
-	public partial class Projects {
-		
-		protected System.Web.UI.WebControls.Content Content1;
-	}
+namespace Porthole.Pages {
+    
+    
+    public partial class Project {
+        
+        protected System.Web.UI.WebControls.Content Content1;
+    }
 }

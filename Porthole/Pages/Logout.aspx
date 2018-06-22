@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Logout" CodeBehind="~/Logout.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Logout" CodeBehind="~/Logout.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
 <h1>done already?</h1>
 <p class="text-error">are you sure you want to logout?</p>

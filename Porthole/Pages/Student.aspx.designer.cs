@@ -8,19 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole {
+namespace Porthole.Pages {
 	
 	
-	public partial class Login {
+	public partial class Student {
 		
 		protected System.Web.UI.WebControls.Content Content1;
-		
-		protected System.Web.UI.WebControls.TextBox txtEmail;
-		
-		protected System.Web.UI.WebControls.TextBox txtPassword;
-		
-		protected System.Web.UI.WebControls.Label lblError;
-		
-		protected System.Web.UI.WebControls.Button btnLogin;
 	}
 }

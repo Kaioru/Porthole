@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Projects" CodeBehind="~/Projects.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Projects" CodeBehind="~/Projects.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
 <h1>projects</h1>
 <%@ Import Namespace="MoreLinq" %>

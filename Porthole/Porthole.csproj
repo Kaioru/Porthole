@@ -141,23 +141,23 @@
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
-    <Content Include="Assets\css\main.css" />
-    <Content Include="Assets\css\ext\spectre-exp.css" />
-    <Content Include="Assets\css\ext\spectre-exp.min.css" />
-    <Content Include="Assets\css\ext\spectre-icons.css" />
-    <Content Include="Assets\css\ext\spectre-icons.min.css" />
-    <Content Include="Assets\css\ext\spectre.css" />
-    <Content Include="Assets\css\ext\spectre.min.css" />
-    <Content Include="Layouts\Template.master" />
-    <Content Include="Students.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Student.aspx" />
-    <Content Include="Layouts\DefaultTemplate.master" />
-    <Content Include="Projects.aspx" />
-    <Content Include="Project.aspx" />
-    <Content Include="Layouts\Footer.ascx" />
-    <Content Include="Settings.aspx" />
-    <Content Include="Logout.aspx" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Logout.aspx" />
+    <Content Include="Pages\Project.aspx" />
+    <Content Include="Pages\Projects.aspx" />
+    <Content Include="Pages\Settings.aspx" />
+    <Content Include="Pages\Student.aspx" />
+    <Content Include="Pages\Students.aspx" />
+    <Content Include="Pages\Layouts\DefaultTemplate.master" />
+    <Content Include="Pages\Layouts\Footer.ascx" />
+    <Content Include="Pages\Layouts\Template.master" />
+    <Content Include="Pages\Assets\css\ext\spectre.css" />
+    <Content Include="Pages\Assets\css\ext\spectre.min.css" />
+    <Content Include="Pages\Assets\css\ext\spectre-exp.css" />
+    <Content Include="Pages\Assets\css\ext\spectre-exp.min.css" />
+    <Content Include="Pages\Assets\css\ext\spectre-icons.css" />
+    <Content Include="Pages\Assets\css\ext\spectre-icons.min.css" />
+    <Content Include="Pages\Assets\css\main.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -165,18 +165,6 @@
     </Compile>
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
-    <Compile Include="Layouts\Template.master.cs">
-      <DependentUpon>Template.master</DependentUpon>
-    </Compile>
-    <Compile Include="Layouts\Template.master.designer.cs">
-      <DependentUpon>Template.master</DependentUpon>
-    </Compile>
-    <Compile Include="Students.aspx.cs">
-      <DependentUpon>Students.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Students.aspx.designer.cs">
-      <DependentUpon>Students.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Mentor.cs" />
     <Compile Include="Models\SkillSet.cs" />
     <Compile Include="Models\StudentSkillSet.cs" />
@@ -186,52 +174,70 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student.aspx.cs">
-      <DependentUpon>Student.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Student.aspx.designer.cs">
-      <DependentUpon>Student.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Layouts\DefaultTemplate.master.cs">
-      <DependentUpon>DefaultTemplate.master</DependentUpon>
-    </Compile>
-    <Compile Include="Layouts\DefaultTemplate.master.designer.cs">
-      <DependentUpon>DefaultTemplate.master</DependentUpon>
-    </Compile>
-    <Compile Include="Projects.aspx.cs">
-      <DependentUpon>Projects.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Projects.aspx.designer.cs">
-      <DependentUpon>Projects.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Project.aspx.cs">
-      <DependentUpon>Project.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Project.aspx.designer.cs">
-      <DependentUpon>Project.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.aspx.cs">
-      <DependentUpon>Settings.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.aspx.designer.cs">
-      <DependentUpon>Settings.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Logout.aspx.cs">
+    <Compile Include="Pages\Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Logout.aspx.designer.cs">
+    <Compile Include="Pages\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Projects.aspx.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Projects.aspx.designer.cs">
+      <DependentUpon>Projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\DefaultTemplate.master.designer.cs">
+      <DependentUpon>DefaultTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\DefaultTemplate.master.cs">
+      <DependentUpon>DefaultTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\Template.master.designer.cs">
+      <DependentUpon>Template.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\Template.master.cs">
+      <DependentUpon>Template.master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Layouts\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\Layouts\" />
+    <Folder Include="Pages\Assets\" />
+    <Folder Include="Pages\Settings\" />
+    <Folder Include="Pages\Settings\Student\" />
+    <Folder Include="Pages\Settings\Mentor\" />
+    <Folder Include="Pages\Settings\Parent\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

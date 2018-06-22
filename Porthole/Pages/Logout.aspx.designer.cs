@@ -8,11 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole.Layouts {
-	
-	
-	public partial class Template {
-		
-		protected System.Web.UI.WebControls.ContentPlaceHolder cphMain;
-	}
+namespace Porthole.Pages {
+    
+    
+    public partial class Logout {
+        
+        protected System.Web.UI.WebControls.Content Content1;
+        
+        protected System.Web.UI.WebControls.Button btnLogout;
+    }
 }

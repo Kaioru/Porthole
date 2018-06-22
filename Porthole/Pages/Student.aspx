@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/Template.master" Inherits="Porthole.Student" CodeBehind="~/Student.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/Template.master" Inherits="Porthole.Pages.Student" CodeBehind="~/Student.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
  <div class="off-canvas off-canvas-sidebar-show">
     <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-main">

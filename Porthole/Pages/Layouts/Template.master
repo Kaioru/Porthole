@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" Inherits="Porthole.Layouts.Template" CodeBehind="~/Template.master.cs" %>
+﻿<%@ Master Language="C#" Inherits="Porthole.Pages.Layouts.Template" CodeBehind="~/Template.master.cs" %>
 <!DOCTYPE html>
 <html>
 <head runat="server">
