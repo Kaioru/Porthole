@@ -167,7 +167,7 @@
     <Compile Include="Models\Suggestion.cs" />
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
-    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\IAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Porthole.Models
 {
-	public interface Account
+	public interface IAccount
     {
         string EmailAddress { get; set; }
         string Password { get; set; }
