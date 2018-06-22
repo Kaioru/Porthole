@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" Inherits="Porthole.Layouts.DefaultTemplate" MasterPageFile="Layouts/Template.master" CodeBehind="~/DefaultTemplate.master.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
+<header class="navbar">
+    <section class="navbar-section">
+        <a href="" class="navbar-brand mr-2">Porthole</a>
+        <a href="" class="btn btn-link">Portfolios</a>
+        <a href="" class="btn btn-link">Projects</a>
+    </section>
+    <section class="navbar-section">
+        <% if (Account == null) { %>
+            <a href="Login.aspx" class="btn">Login</a>
+        <% } else { %>
+            <div class="btn-list">
+                <a href="settings.html" class="btn">
+                    <i class="fas fa-user"></i>&nbsp;<%= Account.EmailAddress %></a>
+                <a href="settings.html" class="btn">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </div>
+        <% } %>
+    </section>
+</header>
+<div id="container" class="content">
+    <div class="container">
+        <div>
+            <asp:ContentPlaceHolder id="cphContent" runat="server" /> 
+        </div>
+    </div>
+     <div class="container">
+        <footer>
+            <div class="divider"></div>
+            <p>made with
+                <span class="text-error">♥</span> by
+                <a href="https://github.com/kaioru" target="_blank">kaioru</a>, 
+                <a href="https://github.com/bokiex" target="_blank">bokiex</a> and 
+                <a href="https://github.com/DeuxEnigma" target="_blank">deuxenigma</a>.</p>
+        </footer>
+    </div>
+</div>
+</asp:Content>

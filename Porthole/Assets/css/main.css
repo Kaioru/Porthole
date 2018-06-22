@@ -106,3 +106,7 @@ label {
 .form-group, .input-group {
     padding: 0.2rem 0rem;
 }
+
+.list-columns {
+    padding: 0rem 0.4rem;
+}

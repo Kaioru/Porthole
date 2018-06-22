@@ -27,6 +27,6 @@ namespace Porthole.Models
 		public virtual DbSet<Project> Project { get; set; }
 		public virtual DbSet<SkillSet> SkillSet { get; set; }
 		public virtual DbSet<Suggestion> Suggestion { get; set; }
-		public virtual DbSet<ViewingRequest> Request { get; set; }
+		public virtual DbSet<ViewingRequest> ViewingRequest { get; set; }
     }
 }

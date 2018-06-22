@@ -7,7 +7,7 @@ namespace Porthole.Models
     public class ViewingRequest
     {
 		[Key]
-        [Column("RequestID")]
+        [Column("ViewingRequestID")]
         public int ID { get; set; }
 		public string StudentName { get; set; }
         public string Status { get; set; }

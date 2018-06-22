@@ -126,6 +126,13 @@
     <Reference Include="Castle.Core">
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\packages\morelinq.2.10.0\lib\net40\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -139,8 +146,10 @@
     <Content Include="Assets\css\ext\spectre.css" />
     <Content Include="Assets\css\ext\spectre.min.css" />
     <Content Include="Layouts\Template.master" />
-    <Content Include="Default.aspx" />
+    <Content Include="Students.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Student.aspx" />
+    <Content Include="Layouts\DefaultTemplate.master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -154,11 +163,11 @@
     <Compile Include="Layouts\Template.master.designer.cs">
       <DependentUpon>Template.master</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Mentor.cs" />
     <Compile Include="Models\SkillSet.cs" />
@@ -174,6 +183,18 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DefaultTemplate.master.cs">
+      <DependentUpon>DefaultTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DefaultTemplate.master.designer.cs">
+      <DependentUpon>DefaultTemplate.master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/Template.master" Inherits="Porthole.Login" CodeBehind="~/Login.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Login" CodeBehind="~/Login.aspx.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
 <h1>login</h1>
 
 <div class="columns">
