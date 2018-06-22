@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" Inherits="Porthole.Layouts.Template" %>
+﻿<%@ Master Language="C#" Inherits="Porthole.Layouts.Template" CodeBehind="~/Template.master.cs" %>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -6,7 +6,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link rel="stylesheet" href="../Assets/css/ext/spectre.min.css">
     <link rel="stylesheet" href="../Assets/css/ext/spectre-exp.min.css">
     <link rel="stylesheet" href="../Assets/css/ext/spectre-icons.min.css">
@@ -21,12 +20,25 @@
             <a href="" class="btn btn-link">Portfolios</a>
             <a href="" class="btn btn-link">Projects</a>
         </section>
+        <section class="navbar-section">
+            <% if (Account == null) { %>
+                <a href="Login.aspx" class="btn">Login</a>
+            <% } else { %>
+                <div class="btn-list">
+                    <a href="settings.html" class="btn">
+                        <i class="fas fa-user"></i>&nbsp;<%= Account.EmailAddress %></a>
+                    <a href="settings.html" class="btn">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </div>
+            <% } %>
+        </section>
     </header>
     <div id="container" class="content">
         <div class="container">
-            <form runat="server">
+            <div>
                 <asp:ContentPlaceHolder id="cphMain" runat="server" /> 
-            </form>
+            </div>
         </div>
          <div class="container">
             <footer>

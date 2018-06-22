@@ -1,4 +1,108 @@
-﻿.navbar {
+﻿html, body {
+    height: 100%;
+}
+
+.off-canvas .off-canvas-sidebar {
+    padding: 2rem;
+    width: 14rem;
+}
+
+.off-canvas-sidebar {
+    height: 100%;
+    position: fixed;
+}
+
+.content-nav {
+    right: 0;
+    position: fixed;
+    padding-left: 100px;
+}
+
+.content {
+    position: relative;
+}
+
+.avatar-main {
+    height: 6rem;
+    width: 6rem;
+}
+
+.off-canvas-sidebar a {
+    font-size: 1rem;
+}
+
+.sidebar-container {
+    padding: 0.2rem;
+}
+
+    .sidebar-container h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+.content .container {
+    padding: 0rem 4.2rem;
+    padding-top: 2rem;
+}
+
+.off-canvas-content .container {
+    padding: 1.2rem 0rem;
+    padding-right: 10rem;
+}
+
+.off-canvas-content {
+    position: relative;
+    overflow: auto;
+    z-index: 1;
+}
+
+.content p {
+    font-size: 1rem;
+}
+
+footer {
+    color: #acb3c2;
+}
+
+    footer a {
+        color: #667189;
+    }
+
+.content .tile {
+    padding-bottom: 0.6rem;
+}
+
+.off-canvas-content .tile {
+    padding-bottom: 1.8rem;
+}
+
+.tile-title {
+    font-weight: 600;
+}
+
+.tile-content {
+    margin-left: 0.6rem;
+}
+
+.headbar {
+    padding: 2rem;
+    padding-left: 4rem;
+    background-color: #f8f9fa;
+}
+
+.navbar {
     padding: 1rem;
     background-color: #f8f9fa;
+}
+
+.btn-list > * {
+    margin: 0 0.2rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group, .input-group {
+    padding: 0.2rem 0rem;
 }
