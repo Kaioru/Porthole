@@ -14,15 +14,7 @@ namespace Porthole
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			using (var context = new DatabaseContext()) {
-				this.Students = context.Student
-					.Include(s => s.Mentor)
-					.Include(s => s.StudentSkillSets)
-					.ThenInclude(s => s.SkillSet)
-					.Include(s => s.ProjectMembers)
-					.ThenInclude(s => s.Project)
-					.ToList();
-			}
+			
 		}
     }
 }

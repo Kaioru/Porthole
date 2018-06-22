@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Porthole.Models
 {
-	public class Mentor : Account
+	public class Mentor : IAccount
     {
 		[Key]
 		[Column("MentorID")]
