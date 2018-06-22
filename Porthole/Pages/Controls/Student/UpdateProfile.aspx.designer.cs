@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole.Pages.Layouts {
-    
-    
-    public partial class DefaultTemplate {
-        
-        protected System.Web.UI.WebControls.Content Content1;
-        
-        protected System.Web.UI.WebControls.ContentPlaceHolder cphContent;
-    }
+namespace Porthole.Pages.Controls.Student {
+	
+	
+	public partial class UpdateProfile {
+		
+		protected System.Web.UI.WebControls.Content Content1;
+		
+		protected System.Web.UI.WebControls.Content Content2;
+	}
 }

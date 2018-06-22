@@ -158,6 +158,9 @@
     <Content Include="Pages\Assets\css\ext\spectre-icons.css" />
     <Content Include="Pages\Assets\css\ext\spectre-icons.min.css" />
     <Content Include="Pages\Assets\css\main.css" />
+    <Content Include="Pages\Controls\Student\UpdateProfile.aspx" />
+    <Content Include="Pages\Layouts\BreadCrumb.ascx" />
+    <Content Include="Pages\Layouts\ControlTemplate.master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -228,16 +231,34 @@
     <Compile Include="Pages\Layouts\Template.master.cs">
       <DependentUpon>Template.master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\BreadCrumb.ascx.cs">
+      <DependentUpon>BreadCrumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\BreadCrumb.ascx.designer.cs">
+      <DependentUpon>BreadCrumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\ControlTemplate.master.cs">
+      <DependentUpon>ControlTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layouts\ControlTemplate.master.designer.cs">
+      <DependentUpon>ControlTemplate.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Pages\" />
     <Folder Include="Pages\Layouts\" />
     <Folder Include="Pages\Assets\" />
-    <Folder Include="Pages\Settings\" />
-    <Folder Include="Pages\Settings\Student\" />
-    <Folder Include="Pages\Settings\Mentor\" />
-    <Folder Include="Pages\Settings\Parent\" />
+    <Folder Include="Pages\Controls\" />
+    <Folder Include="Pages\Controls\Mentor\" />
+    <Folder Include="Pages\Controls\Parent\" />
+    <Folder Include="Pages\Controls\Student\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

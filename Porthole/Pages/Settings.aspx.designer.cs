@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole {
+namespace Porthole.Pages {
 	
 	
 	public partial class Settings {

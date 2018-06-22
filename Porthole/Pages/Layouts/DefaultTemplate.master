@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" Inherits="Porthole.Pages.Layouts.DefaultTemplate" MasterPageFile="Layouts/Template.master" CodeBehind="~/DefaultTemplate.master.cs" %>
+﻿<%@ Master Language="C#" Inherits="Porthole.Pages.Layouts.DefaultTemplate" MasterPageFile="/Pages/Layouts/Template.master" CodeBehind="~/DefaultTemplate.master.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
 <header class="navbar">
     <section class="navbar-section">

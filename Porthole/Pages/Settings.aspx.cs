@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
-using System.Web.UI;
 using Porthole.Models;
 
 namespace Porthole.Pages
@@ -22,7 +20,7 @@ namespace Porthole.Pages
 				{
 					Icon = "",
 					Option = "update profile",
-					Redirect = ""
+					Redirect = "Controls/Student/UpdateProfile.aspx"
 				});
 				this.Options.Add(new SettingsOption
                 {
