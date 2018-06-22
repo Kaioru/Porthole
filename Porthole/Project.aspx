@@ -28,6 +28,7 @@
         <div class="container">
             <li class="menu-item">
                 <a href="#about"># about</a>
+                <a href="#links"># links</a>
                 <a href="#collaborators"># collaborators</a>
             </li>
         </div>
@@ -38,6 +39,19 @@
         <h2>about</h2>
         <%@ Import Namespace="Markdig" %>
         <div class="col-8"><%= Markdown.ToHtml(CurrentProject.Description) %></div>
+    </div>
+
+    <div class="container">
+        <a id="links"></a>
+        <h2>links</h2>
+        <div class="tile">
+            <div class="tile-icon">
+                <i class="far fa-file"></i>
+            </div>
+            <div class="tile-content">
+                <a href="<%= CurrentProject.URL %>" target="_blank" class="tile-subtitle"><%= CurrentProject.URL %></a>
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -69,7 +83,10 @@
             <% } %>
         </div>
         <%@ Import Namespace="System.Linq" %>
-        <small class="text-gray">..and <%= CurrentProject.ProjectMembers.Count(pm => pm.Student.Status.Equals("Y")) %> more private collaborators</small>
+        <% var privateCount = CurrentProject.ProjectMembers.Count(pm => pm.Student.Status.Equals("Y")); %>
+        <% if (privateCount > 0) { %>
+            <small class="text-gray">..and <%= privateCount %> more private collaborators</small>
+        <% } %>
     </div>
 
     <div class="container">
