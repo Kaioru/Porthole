@@ -103,7 +103,7 @@
                     <i class="far fa-file"></i>
                 </div>
                 <div class="tile-content">
-                    <a class="tile-subtitle"><%= CurrentStudent.URL %></a>
+                    <a href="<%= CurrentStudent.URL %>" target="_blank" class="tile-subtitle"><%= CurrentStudent.URL %></a>
                 </div>
             </div>
         </div>
