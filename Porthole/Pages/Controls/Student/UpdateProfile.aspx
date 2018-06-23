@@ -48,7 +48,7 @@
             </div>
 
             <div class="text-right">
-                <button class="btn">reset</button>
+                <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
                 <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
             </div>
         </form>

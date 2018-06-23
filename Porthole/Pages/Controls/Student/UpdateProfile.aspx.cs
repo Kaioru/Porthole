@@ -15,11 +15,16 @@ namespace Porthole.Pages.Controls.Student
 			this.CurrentStudent = (Models.Student)Session["Account"];
 
 			if (!Page.IsPostBack)
-			{            
-				txtDescription.Text = CurrentStudent.Description;
-				txtAchievement.Text = CurrentStudent.Achievement;
-				txtURL.Text = CurrentStudent.URL;
+			{
+				btnReset_Click(sender, e);
 			}
+		}
+
+		public void btnReset_Click(Object sender, EventArgs e)
+		{
+			txtDescription.Text = CurrentStudent.Description;
+            txtAchievement.Text = CurrentStudent.Achievement;
+            txtURL.Text = CurrentStudent.URL;
 		}
 
 		public void btnSubmit_Click(Object sender, EventArgs e)

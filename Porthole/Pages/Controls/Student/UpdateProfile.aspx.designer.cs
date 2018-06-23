@@ -23,6 +23,8 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.TextBox txtURL;
 		
+		protected System.Web.UI.WebControls.Button btnReset;
+		
 		protected System.Web.UI.WebControls.Button btnSubmit;
 	}
 }
