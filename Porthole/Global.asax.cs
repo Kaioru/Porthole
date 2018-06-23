@@ -2,7 +2,7 @@
 
 namespace Porthole
 {
-    public class Global : HttpApplication
+    public partial class Global : HttpApplication
     {
         protected void Application_Start()
         {
