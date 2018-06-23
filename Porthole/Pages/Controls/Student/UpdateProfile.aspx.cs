@@ -15,9 +15,9 @@ namespace Porthole.Pages.Controls.Student
 
         protected void Page_Load(object sender, EventArgs e)
 		{
-            this.CurrentStudent = (Models.Student)Session["Account"];        
+            CurrentStudent = (Models.Student)Session["Account"];
 
-			if (!Page.IsPostBack)
+            if (!Page.IsPostBack)
 			{
 				Reset();
 			}
@@ -41,7 +41,7 @@ namespace Porthole.Pages.Controls.Student
                 context.SkillSet.ToList().ForEach(s => {
                     cblSkills.Items.Add(new ListItem
                     {
-                        Text = s.Name,
+                        Text = " " + s.Name,
                         Value = s.ID.ToString(),
                         Selected = CurrentStudent.StudentSkillSets.Any(ss => ss.SkillSet.ID == s.ID)
                     });
@@ -66,16 +66,19 @@ namespace Porthole.Pages.Controls.Student
 
 				foreach (ListItem item in cblSkills.Items)
 				{
-					student.StudentSkillSets.Add(new StudentSkillSet
-					{
-                        Student = student,
-                        SkillSet = context.SkillSet
-						                  .Single(s => s.ID == Convert.ToInt32(item.Value))
-                    });       
+                    if (item.Selected) {
+                        student.StudentSkillSets.Add(new StudentSkillSet
+                        {
+                            Student = student,
+                            SkillSet = context.SkillSet
+                                              .Single(s => s.ID == Convert.ToInt32(item.Value))
+                        });  
+                    } 
 				}
 
 				context.SaveChanges();
 
+                CurrentStudent = student;
 				Session["Account"] = student;
                 Reset();
 				lblInfo.CssClass = "text-success";
