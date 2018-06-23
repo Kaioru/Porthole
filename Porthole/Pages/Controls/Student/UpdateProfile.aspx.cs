@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,7 +15,7 @@ namespace Porthole.Pages.Controls.Student
 
         protected void Page_Load(object sender, EventArgs e)
 		{
-			this.CurrentStudent = (Models.Student)Session["Account"];        
+            this.CurrentStudent = (Models.Student)Session["Account"];        
 
 			if (!Page.IsPostBack)
 			{
@@ -61,11 +62,10 @@ namespace Porthole.Pages.Controls.Student
 				student.Achievement = txtAchievement.Text;
 				student.URL = txtURL.Text;
 
-				student.StudentSkillSets.Clear();        
+				student.StudentSkillSets.Clear();
 
 				foreach (ListItem item in cblSkills.Items)
 				{
-					Console.WriteLine(item.Selected);
 					student.StudentSkillSets.Add(new StudentSkillSet
 					{
                         Student = student,
@@ -77,6 +77,7 @@ namespace Porthole.Pages.Controls.Student
 				context.SaveChanges();
 
 				Session["Account"] = student;
+                Reset();
 				lblInfo.CssClass = "text-success";
 				lblInfo.Text = "beep beep boop, we've updated your profile!";            
 			}
