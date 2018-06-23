@@ -21,7 +21,14 @@ namespace Porthole.Pages.Controls.Student
             if (!Page.IsPostBack) {
                 Egg = Eggs[new Random().Next(Eggs.Count)];
                 txtTitle.Attributes.Add("placeholder", "like " + Egg + " or something weird");
+
+                lTitle.Text = string.Empty;
             }
+        }
+
+        public void txtTitle_TextChanged(Object sender, EventArgs e)
+        {
+            lTitle.Text = txtTitle.Text;
         }
 
         public void btnReset_Click(Object sender, EventArgs e)

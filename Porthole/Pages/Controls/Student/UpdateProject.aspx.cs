@@ -51,6 +51,13 @@ namespace Porthole.Pages.Controls.Student
                     }
                 });
             }
+
+            lTitle.Text = txtTitle.Text;
+        }
+
+        public void txtTitle_TextChanged(Object sender, EventArgs e)
+        {
+            lTitle.Text = txtTitle.Text;
         }
 
         public void btnReset_Click(Object sender, EventArgs e)

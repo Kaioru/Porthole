@@ -8,6 +8,9 @@
     <div class="tile-icon">
         <img src="" class="avatar avatar-main" alt="avatar">
     </div>
+    <div class="tile-content">
+        <h1><%= CurrentProject.Title %></h1>
+    </div>
 </div>
 
 <div class="columns">

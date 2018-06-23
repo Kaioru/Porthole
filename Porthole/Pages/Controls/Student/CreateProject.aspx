@@ -8,6 +8,9 @@
     <div class="tile-icon">
         <img src="" class="avatar avatar-main" alt="avatar">
     </div>
+    <div class="tile-content">
+        <h1><asp:Literal ID="lTitle" runat="server"></asp:Literal></h1>
+    </div>
 </div>
 
 <div class="columns">
@@ -18,7 +21,7 @@
                     <label class="form-label" for="txtTitle">title</label>
                 </div>
                 <div class="col-9 col-sm-12">
-                    <asp:TextBox runat="server" class="form-input" id="txtTitle"></asp:TextBox>
+                    <asp:TextBox runat="server" class="form-input" AutoPostBack="true" OnTextChanged="txtTitle_TextChanged" id="txtTitle"></asp:TextBox>
                 </div>
             </div>
 
