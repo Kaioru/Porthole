@@ -17,6 +17,7 @@ namespace Porthole.Pages.Controls.Student
 			if (!Page.IsPostBack)
 			{            
 				txtDescription.Text = CurrentStudent.Description;
+				txtAchievement.Text = CurrentStudent.Achievement;
 				txtURL.Text = CurrentStudent.URL;
 			}
 		}
@@ -29,6 +30,7 @@ namespace Porthole.Pages.Controls.Student
 					.Single(s => s.ID == CurrentStudent.ID);
 
 				student.Description = txtDescription.Text;
+				student.Achievement = txtAchievement.Text;
 				student.URL = txtURL.Text;
 				context.SaveChanges();
 

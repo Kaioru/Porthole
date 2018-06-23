@@ -27,6 +27,14 @@
             </div>
             <div class="form-group">
                 <div class="col-3 col-sm-12">
+                    <label class="form-label" for="txtAchievement">achievements</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                    <asp:TextBox runat="server" class="form-input" id="txtAchievement" placeholder="what did you achieve in life" TextMode="MultiLine" Rows="4"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
                     <label class="form-label" for="txtURL">contacts</label>
                 </div>
                 <div class="col-9 col-sm-12">
