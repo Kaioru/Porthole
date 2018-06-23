@@ -46,6 +46,11 @@
                 <p class="tile-title"><%=project.Title%></p>
                 <p class="tile-subtitle text-gray col-10"><%=project.Description%></p>
             </div>
+            <div class="tile-action">
+                <a href="UpdateProjectReflections.aspx?id=<%= project.ID %>" class="btn">
+                    <i class="icon icon-edit"></i>
+                </a>
+            </div>
         </div>
     <% } %>
 <% } %>
