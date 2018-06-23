@@ -21,7 +21,11 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.TextBox txtAchievement;
 		
+		protected System.Web.UI.WebControls.CheckBoxList cblSkills;
+		
 		protected System.Web.UI.WebControls.TextBox txtURL;
+		
+		protected System.Web.UI.WebControls.Label lblInfo;
 		
 		protected System.Web.UI.WebControls.Button btnReset;
 		

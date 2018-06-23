@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
 
 namespace Porthole.Pages
@@ -17,7 +18,10 @@ namespace Porthole.Pages
 			using (var context = new DatabaseContext()) {
 				List<IAccount> accounts = new List<IAccount>();
 
-				accounts.AddRange(context.Student.ToList());
+				accounts.AddRange(context.Student
+				                  .Include(s => s.StudentSkillSets)
+				                  .ThenInclude(ss => ss.SkillSet)
+				                  .ToList());
 				accounts.AddRange(context.Mentor.ToList());
 				accounts.AddRange(context.Parent.ToList());
 

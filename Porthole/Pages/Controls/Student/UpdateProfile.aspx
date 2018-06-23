@@ -35,6 +35,14 @@
             </div>
             <div class="form-group">
                 <div class="col-3 col-sm-12">
+                    <label class="form-label" for="">skills</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                    <asp:CheckBoxList runat="server" id="cblSkills" RepeatDirection="Horizontal" RepeatColumns="2" RepeatLayout="Table" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
                     <label class="form-label" for="txtURL">contacts</label>
                 </div>
                 <div class="col-9 col-sm-12">
@@ -47,9 +55,16 @@
                 </div>
             </div>
 
-            <div class="text-right">
-                <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
-                <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
+            <div class="form-group columns">
+                <div class="column col-9 col-sm-12">
+                    <asp:Label runat="server" id="lblInfo" />
+                </div>
+                <div class="column col-3 col-sm-12">
+                    <div class="text-right">
+                        <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
+                        <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
+                    </div>
+                </div>
             </div>
         </form>
     </div>
