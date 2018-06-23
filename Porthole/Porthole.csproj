@@ -172,6 +172,7 @@
     <Content Include="Pages\Layouts\ControlTemplate.master" />
     <Content Include="Pages\Controls\Student\UpdateProjects.aspx" />
     <Content Include="Pages\Controls\Student\CreateProject.aspx" />
+    <Content Include="Pages\Controls\Student\UpdateProject.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -283,6 +284,12 @@
     </Compile>
     <Compile Include="Pages\Controls\Student\CreateProject.aspx.designer.cs">
       <DependentUpon>CreateProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProject.aspx.cs">
+      <DependentUpon>UpdateProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProject.aspx.designer.cs">
+      <DependentUpon>UpdateProject.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -45,11 +45,17 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Student/CreateProject.aspx",
                 Previous = updateProjects
             });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "edit project",
+                Page = "/Pages/Controls/Student/UpdateProject.aspx",
+                Previous = updateProjects
+            });
 		}
 
 		protected void Page_Load(object sender, EventArgs e)
         {
-			this.CurrentPath = Page.AppRelativeVirtualPath.Substring(1);
+            this.CurrentPath = Page.AppRelativeVirtualPath.Substring(1).Split('?')[0];
 
 			Crumb CurrentCrumb = Crumbs.Find(c => c.Page.Equals(CurrentPath));
 
