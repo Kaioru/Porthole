@@ -19,8 +19,6 @@ namespace Porthole.Pages
 				List<IAccount> accounts = new List<IAccount>();
 
 				accounts.AddRange(context.Student
-				                  .Include(s => s.StudentSkillSets)
-				                  .ThenInclude(ss => ss.SkillSet)
 				                  .ToList());
 				accounts.AddRange(context.Mentor.ToList());
 				accounts.AddRange(context.Parent.ToList());

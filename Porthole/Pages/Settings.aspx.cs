@@ -26,7 +26,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "update projects",
-                    Redirect = ""
+                    Redirect = "Controls/Student/UpdateProjects.aspx"
                 });
 				this.Options.Add(new SettingsOption
                 {

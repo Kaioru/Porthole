@@ -31,6 +31,20 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",
 				Previous = settings
 			});
+
+            Crumb updateProjects = new Crumb
+            {
+                Title = "update projects",
+                Page = "/Pages/Controls/Student/UpdateProjects.aspx",
+                Previous = settings
+            };
+
+            this.Crumbs.Add(updateProjects);
+            this.Crumbs.Add(new Crumb {
+                Title = "create project",
+                Page = "/Pages/Controls/Student/CreateProject.aspx",
+                Previous = updateProjects
+            });
 		}
 
 		protected void Page_Load(object sender, EventArgs e)

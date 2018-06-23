@@ -170,6 +170,8 @@
     <Content Include="Pages\Controls\Student\UpdateProfile.aspx" />
     <Content Include="Pages\Layouts\BreadCrumb.ascx" />
     <Content Include="Pages\Layouts\ControlTemplate.master" />
+    <Content Include="Pages\Controls\Student\UpdateProjects.aspx" />
+    <Content Include="Pages\Controls\Student\CreateProject.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -269,6 +271,18 @@
     </Compile>
     <Compile Include="Pages\Layouts\ControlTemplate.master.designer.cs">
       <DependentUpon>ControlTemplate.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProjects.aspx.cs">
+      <DependentUpon>UpdateProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\UpdateProjects.aspx.designer.cs">
+      <DependentUpon>UpdateProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\CreateProject.aspx.cs">
+      <DependentUpon>CreateProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\CreateProject.aspx.designer.cs">
+      <DependentUpon>CreateProject.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
