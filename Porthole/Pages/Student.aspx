@@ -8,7 +8,7 @@
     <div id="#sidebar-main" class="off-canvas-sidebar">
         <!-- off-screen sidebar -->
         <div class="sidebar-container">
-            <img src="<%= CurrentStudent.Photo %>" class="img-responsive avatar avatar-main" />
+            <img src="/Content/Avatars/<%= CurrentStudent.Photo %>" class="img-responsive avatar avatar-main" />
         </div>
 
         <div class="sidebar-container">
@@ -85,7 +85,7 @@
                     <div class="tile">
                         <div class="tile-icon">
                             <figure class="avatar avatar-lg">
-                                <img src="<%= project.Poster %>" />
+                                <img src="/Content/Posters/<%= project.Poster %>" />
                             </figure>
                         </div>
                         <div class="tile-content">

@@ -10,7 +10,7 @@
             <a href="Student.aspx?id=<%= student.ID %>" class="col-3 tile tile-centered">
                 <div class="tile-icon">
                     <figure class="avatar avatar-md">
-                        <img src="<%= student.Photo %>" />
+                        <img src="/Content/Avatars/<%= student.Photo %>" />
                     </figure>
                 </div>
                 <div class="tile-content">
@@ -35,7 +35,7 @@
             <a href="Student.aspx?id=<%= student.ID %>" class="col-3 tile tile-centered">
                 <div class="tile-icon">
                     <figure class="avatar avatar-md">
-                        <img src="<%= student.Photo %>" />
+                        <img src="/Content/Avatars/<%= student.Photo %>" />
                     </figure>
                 </div>
                 <div class="tile-content">

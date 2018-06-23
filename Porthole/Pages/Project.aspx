@@ -3,7 +3,7 @@
 <div class="headbar">
     <div class="tile tile-centered">
         <div class="tile-icon">
-            <img src="<%= CurrentProject.Poster %>" class="avatar avatar-main" alt="avatar">
+            <img src="/Content/Posters/<%= CurrentProject.Poster %>" class="avatar avatar-main" alt="avatar">
         </div>
         <div class="tile-content">
             <ul class="breadcrumb">
@@ -64,7 +64,7 @@
                     <a href="Student.aspx?id=<%= student.ID %>" class="tile tile-centered">
                         <div class="tile-icon">
                             <figure class="avatar avatar-md">
-                                <img src="<%= student.Photo %>" />
+                                <img src="/Content/Avatars/<%= student.Photo %>" />
                             </figure>
                         </div>
                         <div class="tile-content">

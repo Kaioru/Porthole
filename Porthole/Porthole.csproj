@@ -275,6 +275,9 @@
     <Folder Include="Pages\Controls\Mentor\" />
     <Folder Include="Pages\Controls\Parent\" />
     <Folder Include="Content\" />
+    <Folder Include="Content\Avatars\" />
+    <Folder Include="Content\Posters\" />
+    <Folder Include="Content\Chips\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -284,6 +287,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Content\.gitkeep" />
+    <None Include="Content\Posters\.gitkeep" />
+    <None Include="Content\Chips\.gitkeep" />
+    <None Include="Content\Avatars\.gitkeep" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
