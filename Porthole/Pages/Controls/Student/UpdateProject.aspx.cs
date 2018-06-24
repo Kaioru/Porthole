@@ -83,7 +83,7 @@ namespace Porthole.Pages.Controls.Student
                 project.ProjectMembers.Clear();
                 context.Remove(project);
                 context.SaveChanges();
-                Response.Redirect("/Pages/Controls/Student/UpdateProject.aspx");
+                Response.Redirect("/Pages/Controls/Student/UpdateProjects.aspx");
             }
         }
 

@@ -80,7 +80,7 @@ namespace Porthole.Pages.Controls.Student
                 context.Add(project);
 
                 context.SaveChanges();
-                Response.Redirect("/Pages/Controls/Student/UpdateProject.aspx");
+                Response.Redirect("/Pages/Controls/Student/UpdateProjects.aspx");
             }
         }
     }
