@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Porthole.Utils
 {
@@ -10,6 +12,12 @@ namespace Porthole.Utils
                 return value;
 
             return value.Substring(0, value.IndexOf(" ", length, StringComparison.Ordinal)) + "...";
+        }
+
+        public static string GetInitials(string value)
+        {
+            List<string> list = value.Split(' ').Select(t => t.Substring(0, 1)).ToList();
+            return String.Join("", list.Count > 2 ? list.Take(2) : list).ToUpper();
         }
     }
 }

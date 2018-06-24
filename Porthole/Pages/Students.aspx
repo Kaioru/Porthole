@@ -8,8 +8,8 @@
         <% foreach (var student in batch) { %>
             <a href="Student.aspx?id=<%= student.ID %>" class="col-3 tile tile-centered">
                 <div class="tile-icon">
-                    <figure class="avatar avatar-md">
-                        <img src="/Content/Avatars/<%= student.Photo %>" />
+                    <figure class="avatar avatar-md" data-initial="<%= student.Initials %>">
+                        <img src="/Content/Avatars/<%= student.Photo %>" onerror="this.style.display='none'">
                     </figure>
                 </div>
                 <div class="tile-content">
@@ -33,8 +33,8 @@
         <% foreach (var student in batch) { %>
             <a href="Student.aspx?id=<%= student.ID %>" class="col-3 tile tile-centered">
                 <div class="tile-icon">
-                    <figure class="avatar avatar-md">
-                        <img src="/Content/Avatars/<%= student.Photo %>" />
+                    <figure class="avatar avatar-md" data-initial="<%= student.Initials %>">
+                        <img src="/Content/Avatars/<%= student.Photo %>" onerror="this.style.display='none'">
                     </figure>
                 </div>
                 <div class="tile-content">

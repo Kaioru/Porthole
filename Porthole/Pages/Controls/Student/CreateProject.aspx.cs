@@ -7,6 +7,7 @@ using System.Web.UI;
 using Microsoft.EntityFrameworkCore;
 using MoreLinq;
 using Porthole.Models;
+using Porthole.Utils;
 
 namespace Porthole.Pages.Controls.Student
 {
@@ -32,7 +33,7 @@ namespace Porthole.Pages.Controls.Student
         public void txtTitle_TextChanged(Object sender, EventArgs e)
         {
             lTitle.Text = txtTitle.Text;
-            figPoster.Attributes["data-initial"] = String.Join("", txtTitle.Text.Split(' ').Select(t => t.Substring(0, 1)).ToList()).ToUpper();
+            figPoster.Attributes["data-initial"] = DisplayUtils.GetInitials(txtTitle.Text);
         }
 
         public void btnReset_Click(Object sender, EventArgs e)

@@ -7,8 +7,8 @@
     <% foreach (var project in batch) { %>
         <a href="Project.aspx?id=<%= project.ID %>" class="col-6 tile tile-centered">
             <div class="tile-icon">
-                <figure class="avatar avatar-lg">
-                    <img src="/Content/Posters/<%= project.Poster %>" />
+                <figure class="avatar avatar-lg" data-initial="<%= project.Initials %>">
+                    <img src="/Content/Posters/<%= project.Poster %>" onerror="this.style.display='none'">
                 </figure>
             </div>
             <div class="tile-content">

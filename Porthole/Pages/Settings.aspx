@@ -2,10 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
-        <img src="" class="avatar avatar-main" alt="avatar">
+        <figure class="avatar avatar-main" data-initial="<%= Account.Initials %>">
+            <img src="" onerror="this.style.display='none'">
+        </figure>
     </div>
     <div class="tile-content">
-        <h1><%= Account.EmailAddress %></h1>
+        <h1><%= Account.Name %></h1>
         <p class="tile-subtitle text-gray">this is the settings page where you can set all your tings!</p>
     </div>
 </div>

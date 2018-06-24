@@ -8,7 +8,9 @@
     <div id="#sidebar-main" class="off-canvas-sidebar">
         <!-- off-screen sidebar -->
         <div class="sidebar-container">
-            <img src="/Content/Avatars/<%= CurrentStudent.Photo %>" class="img-responsive avatar avatar-main" />
+            <figure class="avatar avatar-main" data-initial="<%= CurrentStudent.Initials %>">
+                <img src="/Content/Avatars/<%= CurrentStudent.Photo %>" onerror="this.style.display='none'">
+            </figure>
         </div>
 
         <div class="sidebar-container">
@@ -70,7 +72,10 @@
                 <% foreach (var pivot in CurrentStudent.StudentSkillSets) { %>
                     <% var skillset = pivot.SkillSet; %>
                     <div class="chip">
-                        <img src="" class="avatar avatar-sm"> <%= skillset.Name %>
+                        <figure class="avatar avatar-sm" data-initial="<%= skillset.Initials %>">
+                            <img src="/Content/Chips/<%= skillset.Name %>" onerror="this.style.display='none'">
+                        </figure>
+                        &nbsp;<%= skillset.Name %>
                     </div>
                 <% } %>
             </div>
@@ -85,8 +90,8 @@
                     <% var project = pivot.Project; %>
                     <div class="tile">
                         <div class="tile-icon">
-                            <figure class="avatar avatar-lg">
-                                <img src="/Content/Posters/<%= project.Poster %>" />
+                            <figure class="avatar avatar-lg" data-initial="<%= project.Initials %>">
+                                <img src="/Content/Posters/<%= project.Poster %>" onerror="this.style.display='none'">
                             </figure>
                         </div>
                         <div class="tile-content">

@@ -3,7 +3,9 @@
 <div class="headbar">
     <div class="tile tile-centered">
         <div class="tile-icon">
-            <img src="/Content/Posters/<%= CurrentProject.Poster %>" class="avatar avatar-main" alt="avatar">
+            <figure class="avatar avatar-main" data-initial="<%= CurrentProject.Initials %>">
+                <img src="/Content/Posters/<%= CurrentProject.Poster %>" onerror="this.style.display='none'">
+            </figure>
         </div>
         <div class="tile-content">
         <ul class="breadcrumb">
@@ -63,8 +65,8 @@
                 <% if (student.Status.Equals("Y")) { %>
                     <a href="Student.aspx?id=<%= student.ID %>" class="tile tile-centered">
                         <div class="tile-icon">
-                            <figure class="avatar avatar-md">
-                                <img src="/Content/Avatars/<%= student.Photo %>" />
+                            <figure class="avatar avatar-md" data-initial="<%= student.Initials %>">
+                                <img src="/Content/Avatars/<%= student.Photo %>" onerror="this.style.display='none'">
                             </figure>
                         </div>
                         <div class="tile-content">
