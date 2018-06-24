@@ -298,6 +298,7 @@
     <Compile Include="Pages\Controls\Student\UpdateProjectReflections.aspx.designer.cs">
       <DependentUpon>UpdateProjectReflections.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\DisplayUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Controls\Mentor\" />
@@ -306,6 +307,7 @@
     <Folder Include="Content\Avatars\" />
     <Folder Include="Content\Posters\" />
     <Folder Include="Content\Chips\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

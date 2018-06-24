@@ -102,7 +102,7 @@
                                     <small class="text-gray">'<%= pivot.Reflection %>'</small>
                                 <% } %>
                             </p>
-                            <p class="tile-subtitle text-gray"><%= project.Description %></p>
+                            <p class="tile-subtitle text-gray"><%= project.ShortDescription %></p>
                             <div class="d-inline">
                                 <a href="Project.aspx?id=<%= project.ID %>" class="btn">visit project page</a>
                             </div>

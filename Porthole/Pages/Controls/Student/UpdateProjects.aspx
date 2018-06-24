@@ -21,7 +21,7 @@
                         <span class="chip">Owner</span>
                     </small>
                 </p>
-                <p class="tile-subtitle text-gray col-10"><%=project.Description%></p>
+                <p class="tile-subtitle text-gray col-10"><%=project.ShortDescription%></p>
             </div>
             <div class="tile-action">
                 <a href="UpdateProject.aspx?id=<%= project.ID %>" class="btn">
@@ -44,7 +44,7 @@
             </div>
             <div class="tile-content">
                 <p class="tile-title"><%=project.Title%></p>
-                <p class="tile-subtitle text-gray col-10"><%=project.Description%></p>
+                <p class="tile-subtitle text-gray col-10"><%=project.ShortDescription%></p>
             </div>
             <div class="tile-action">
                 <a href="UpdateProjectReflections.aspx?id=<%= project.ID %>" class="btn">

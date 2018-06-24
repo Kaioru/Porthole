@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Porthole.Utils;
 
 namespace Porthole.Models
 {
@@ -18,5 +19,12 @@ namespace Porthole.Models
 		public string URL { get; set; }
 
 		public ICollection<ProjectMember> ProjectMembers { get; set; }
+
+        [NotMapped]
+        public string ShortDescription {
+            get {
+                return DisplayUtils.TruncateAtWord(Description, 180);
+            }
+        }
     }
 }
