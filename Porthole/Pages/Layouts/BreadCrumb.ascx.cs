@@ -26,6 +26,8 @@ namespace Porthole.Pages.Layouts
 				Previous = home
 			};
 
+            this.Crumbs.Add(settings);
+
 			this.Crumbs.Add(new Crumb {
 				Title = "update profile",
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",

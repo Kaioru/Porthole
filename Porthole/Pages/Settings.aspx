@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Settings" CodeBehind="~/Settings.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Settings" CodeBehind="~/Settings.aspx.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphTitle" Runat="server">
 <h1>settings</h1>
-
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
         <img src="" class="avatar avatar-main" alt="avatar">
