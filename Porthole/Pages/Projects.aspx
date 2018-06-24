@@ -1,6 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Projects" CodeBehind="~/Projects.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
-<h1>projects</h1>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Projects" CodeBehind="~/Projects.aspx.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <%@ Import Namespace="MoreLinq" %>
 <div class="divider" data-content="new"></div>
 <% foreach (var batch in PublicProjects.Batch(2)) { %>

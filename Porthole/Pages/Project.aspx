@@ -6,12 +6,12 @@
             <img src="/Content/Posters/<%= CurrentProject.Poster %>" class="avatar avatar-main" alt="avatar">
         </div>
         <div class="tile-content">
-            <ul class="breadcrumb">
+        <ul class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="Students.aspx">home</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="Projects.aspx">project</a>
+                    <a href="Projects.aspx">projects</a>
                 </li>
                 <li class="breadcrumb-item">
                     <a href="Projects.aspx?id=<%= CurrentProject.ID %>"><%= CurrentProject.Title.ToLower() %></a>

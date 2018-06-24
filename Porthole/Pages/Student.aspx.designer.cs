@@ -8,11 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole.Pages {
-	
-	
-	public partial class Student {
-		
-		protected System.Web.UI.WebControls.Content Content1;
-	}
+namespace Porthole.Pages
+{
+
+
+    public partial class Student
+    {
+
+        protected System.Web.UI.WebControls.Content Content1;
+    }
 }

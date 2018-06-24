@@ -15,8 +15,6 @@ namespace Porthole.Pages.Layouts {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		
-		protected System.Web.UI.WebControls.ContentPlaceHolder cphTitle;
-		
 		protected System.Web.UI.WebControls.ContentPlaceHolder cphForm;
 	}
 }

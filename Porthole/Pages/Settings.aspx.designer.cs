@@ -14,7 +14,5 @@ namespace Porthole.Pages {
 	public partial class Settings {
 		
 		protected System.Web.UI.WebControls.Content Content1;
-		
-		protected System.Web.UI.WebControls.Content Content2;
 	}
 }

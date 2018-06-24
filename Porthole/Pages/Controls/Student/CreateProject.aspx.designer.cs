@@ -15,8 +15,6 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		
-		protected System.Web.UI.WebControls.Content Content2;
-		
 		protected System.Web.UI.WebControls.Literal lTitle;
 		
 		protected System.Web.UI.WebControls.TextBox txtTitle;

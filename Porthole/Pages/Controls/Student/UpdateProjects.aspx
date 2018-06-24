@@ -1,9 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProjects" CodeBehind="~/UpdateProjects.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphTitle" Runat="server">
-    <h1>update projects</h1>
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="cphForm" Runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <% if (OwnedProjects.Count > 0 ) { %>
     <div class="divider" data-content="projects you own"></div>
     <br />

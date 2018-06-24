@@ -18,6 +18,19 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Students.aspx"
             };
 
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "students",
+                Page = "/Pages/Students.aspx",
+                Previous = home
+            });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "projects",
+                Page = "/Pages/Projects.aspx",
+                Previous = home
+            });
+
             Crumb settings = new Crumb
             {
                 Title = "settings",

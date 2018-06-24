@@ -12,29 +12,21 @@ namespace Porthole.Pages.Layouts
         protected void Page_Load(object sender, EventArgs e)
         {
             this.Account = (IAccount)Session["Account"];
+            string currentPath = Page.AppRelativeVirtualPath.Substring(1);
+            string[] splitted = currentPath.Split('/');
 
-            if (Account == null)
+            if (splitted.Length > 3)
             {
-                Response.Redirect("/Pages/Login.aspx");
-            }
-            else
-            {
-                string currentPath = Page.AppRelativeVirtualPath.Substring(1);
-                string[] splitted = currentPath.Split('/');
+                string type = splitted[3];
 
-                if (splitted.Length > 3)
+                switch (type)
                 {
-                    string type = splitted[3];
-
-                    switch (type)
-                    {
-                        case "Student": if (Account is Models.Student) return; break;
-                        case "Mentor": if (Account is Mentor) return; break;
-                        case "Parent": if (Account is Parent) return; break;
-                    }
-
-                    Response.Redirect("/Pages/Settings.aspx");
+                    case "Student": if (Account is Models.Student) return; break;
+                    case "Mentor": if (Account is Mentor) return; break;
+                    case "Parent": if (Account is Parent) return; break;
                 }
+
+                Response.Redirect("/Pages/Settings.aspx");
             }
         }
     }

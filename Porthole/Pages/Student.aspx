@@ -39,7 +39,7 @@
                 <a href="Students.aspx">home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="Students.aspx">portfolio</a>
+                <a href="Students.aspx">students</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="Student.aspx?id=<%= CurrentStudent.ID %>"><%= CurrentStudent.Name.ToLower() %></a>

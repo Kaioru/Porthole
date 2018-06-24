@@ -14,7 +14,5 @@ namespace Porthole.Pages.Controls.Student {
 	public partial class UpdateProjects {
 		
 		protected System.Web.UI.WebControls.Content Content1;
-		
-		protected System.Web.UI.WebControls.Content Content2;
 	}
 }

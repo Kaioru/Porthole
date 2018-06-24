@@ -1,6 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Students" CodeBehind="~/Students.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
-<h1>students</h1>
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Students" CodeBehind="~/Students.aspx.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <%@ Import Namespace="MoreLinq" %>
 <% if (Children.Count > 0) { %>
     <div class="divider" data-content="child"></div>
