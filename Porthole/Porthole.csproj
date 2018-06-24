@@ -179,6 +179,8 @@
     <Content Include="Pages\Controls\Student\CreateProject.aspx" />
     <Content Include="Pages\Controls\Student\UpdateProject.aspx" />
     <Content Include="Pages\Controls\Student\UpdateProjectReflections.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Pages\Home.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -308,6 +310,18 @@
       <DependentUpon>UpdateProjectReflections.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DisplayUtils.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Controls\Mentor\" />
