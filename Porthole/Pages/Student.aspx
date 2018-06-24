@@ -80,7 +80,8 @@
             <div class="container">
                 <a id="projects"></a>
                 <h2>projects</h2>
-                <% foreach (var pivot in CurrentStudent.ProjectMembers) { %>
+                <%@ Import Namespace="System.Linq" %>
+                <% foreach (var pivot in CurrentStudent.ProjectMembers.OrderBy(m => m.Role).ToList()) { %>
                     <% var project = pivot.Project; %>
                     <div class="tile">
                         <div class="tile-icon">
