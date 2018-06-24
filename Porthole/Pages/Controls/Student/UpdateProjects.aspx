@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProjects" CodeBehind="~/UpdateProjects.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
+<%@ Import Namespace="System.Linq" %>
 <% if (OwnedProjects.Count > 0 ) { %>
     <div class="divider" data-content="projects you own"></div>
     <br />
@@ -16,6 +17,11 @@
                     <small>
                         <span class="chip">Owner</span>
                     </small>
+                    <% var reflection = project.ProjectMembers.Single(m => m.Student.ID == CurrentStudent.ID).Reflection; %>
+                    <% if (reflection != null) { %>
+                        <br />
+                        <small class="text-gray">'<%= reflection %>'</small>
+                    <% } %>
                 </p>
                 <p class="tile-subtitle text-gray col-10"><%=project.ShortDescription%></p>
             </div>
@@ -39,7 +45,13 @@
                 </figure>
             </div>
             <div class="tile-content">
-                <p class="tile-title"><%=project.Title%></p>
+                <p class="tile-title"><%=project.Title%>
+                    <% var reflection = project.ProjectMembers.Single(m => m.Student.ID == CurrentStudent.ID).Reflection; %>
+                    <% if (reflection != null) { %>
+                        <br />
+                        <small class="text-gray">'<%= reflection %>'</small>
+                    <% } %>
+                </p>
                 <p class="tile-subtitle text-gray col-10"><%=project.ShortDescription%></p>
             </div>
             <div class="tile-action">
