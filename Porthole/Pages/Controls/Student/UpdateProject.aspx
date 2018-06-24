@@ -53,11 +53,25 @@
             </div>
 
             <div class="form-group columns">
-                <div class="column col-9 col-sm-12">
+                <div class="column col-8 col-sm-12">
                     <asp:Label runat="server" id="lblInfo" />
                 </div>
-                <div class="column col-3 col-sm-12">
+                <div class="column col-4 col-sm-12">
                     <div class="text-right">
+                        <div class="btn btn-error popover popover-right">
+                            <i class="icon icon-delete"></i>
+                            <div class="popover-container">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-title h5">Really?</div>
+                                        <div class="card-subtitle text-gray">You can't come back from this!</div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <asp:Button runat="server" id="btnDelete" OnClick="btnDelete_Click" class="btn btn-error" Text="delete" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
                         <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
                     </div>

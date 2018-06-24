@@ -27,6 +27,8 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.Label lblInfo;
 		
+		protected System.Web.UI.WebControls.Button btnDelete;
+		
 		protected System.Web.UI.WebControls.Button btnReset;
 		
 		protected System.Web.UI.WebControls.Button btnSubmit;

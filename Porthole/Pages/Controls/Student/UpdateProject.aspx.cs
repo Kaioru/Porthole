@@ -39,7 +39,8 @@ namespace Porthole.Pages.Controls.Student
             cblCollaborators.Items.Clear();
             using (var context = new DatabaseContext())
             {
-                context.Student.ToList().ForEach(s => {
+                context.Student.ToList().ForEach(s =>
+                {
                     if (s.ID != CurrentProject.ProjectMembers.Single(m => m.Role.Equals("Leader")).Student.ID)
                     {
                         cblCollaborators.Items.Add(new ListItem
@@ -65,6 +66,21 @@ namespace Porthole.Pages.Controls.Student
             Reset();
             lblInfo.CssClass = "text-error";
             lblInfo.Text = "bada-bing bada-boong, your details have been reset.";
+        }
+
+        public void btnDelete_Click(Object sender, EventArgs e)
+        {
+            using (var context = new DatabaseContext())
+            {
+                Models.Project project = context.Project
+                    .Include(p => p.ProjectMembers)
+                    .Single(s => s.ID == CurrentProject.ID);
+
+                project.ProjectMembers.Clear();
+                context.Remove(project);
+                context.SaveChanges();
+                Response.Redirect("/Pages/Settings.aspx");
+            }
         }
 
         public void btnSubmit_Click(Object sender, EventArgs e)
