@@ -65,11 +65,6 @@ namespace Porthole.Pages.Controls.Student
             lTitle.Text = txtTitle.Text;
         }
 
-        public void txtDescription_TextChanged(Object sender, EventArgs e)
-        {
-            lDescription.Text = DisplayUtils.TruncateAtWord(txtDescription.Text);
-        }
-
         public void btnReset_Click(Object sender, EventArgs e)
         {
             Reset();
@@ -88,7 +83,7 @@ namespace Porthole.Pages.Controls.Student
                 project.ProjectMembers.Clear();
                 context.Remove(project);
                 context.SaveChanges();
-                Response.Redirect("/Pages/Settings.aspx");
+                Response.Redirect("/Pages/Controls/Student/UpdateProject.aspx");
             }
         }
 
