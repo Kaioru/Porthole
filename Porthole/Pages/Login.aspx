@@ -1,7 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="Layouts/DefaultTemplate.master" Inherits="Porthole.Pages.Login" CodeBehind="~/Login.aspx.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
-<h1>login</h1>
-
+﻿<%@ Page Language="C#" MasterPageFile="Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Login" CodeBehind="~/Login.aspx.cs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="columns">
     <div class="column col-8">
         <form runat="server" class="form-horizontal">

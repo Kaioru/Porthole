@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 
 namespace Porthole.Pages {
-    
-    
-    public partial class Logout {
-        
-        protected System.Web.UI.WebControls.Content Content1;
-        
-        protected System.Web.UI.WebControls.Button btnLogout;
-    }
+	
+	
+	public partial class Logout {
+		
+		protected System.Web.UI.WebControls.Content Content1;
+		
+		protected System.Web.UI.WebControls.Button btnLogout;
+	}
 }
