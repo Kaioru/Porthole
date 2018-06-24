@@ -32,6 +32,20 @@
 
             <div class="form-group">
                 <div class="col-3 col-sm-12">
+                    <label class="form-label" for="txtURL">url</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="icon icon-link"></i>
+                        </span>
+                        <asp:TextBox runat="server" class="form-input" id="txtURL" placeholder="webpage"></asp:TextBox>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
                     <label class="form-label" for="fuPoster">poster</label>
                 </div>
                 <div class="col-9 col-sm-12">

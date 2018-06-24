@@ -50,6 +50,7 @@ namespace Porthole.Pages.Controls.Student
                 {
                     Title = txtTitle.Text,
                     Description = txtDescription.Text,
+                    URL = txtURL.Text,
                     ProjectMembers = new List<ProjectMember>()
                 };
 

@@ -36,6 +36,7 @@ namespace Porthole.Pages.Controls.Student
             txtTitle.Text = CurrentProject.Title;
             txtDescription.Text = CurrentProject.Description;
             txtReflections.Text = CurrentProject.ProjectMembers.Single(m => m.Student.ID == CurrentStudent.ID).Reflection;
+            txtURL.Text = CurrentProject.URL;
             fuPoster.Dispose();
 
             cblCollaborators.Items.Clear();
@@ -96,13 +97,13 @@ namespace Porthole.Pages.Controls.Student
 
                 project.Title = txtTitle.Text;
                 project.Description = txtDescription.Text;
+                project.URL = txtURL.Text;
 
                 if (fuPoster.HasFile)
                 {
                     try
                     {
-                        string filename = Path.GetFileName(fuPoster.FileName);
-
+                        string filename = Guid.NewGuid().ToString();
                         fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
                         project.Poster = filename;
                     }
