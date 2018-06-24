@@ -21,6 +21,8 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.TextBox txtDescription;
 		
+		protected System.Web.UI.WebControls.FileUpload fuPoster;
+		
 		protected System.Web.UI.WebControls.TextBox txtReflections;
 		
 		protected System.Web.UI.WebControls.CheckBoxList cblCollaborators;

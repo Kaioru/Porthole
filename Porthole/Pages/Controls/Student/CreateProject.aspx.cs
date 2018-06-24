@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using Microsoft.EntityFrameworkCore;
+using MoreLinq;
 using Porthole.Models;
 
 namespace Porthole.Pages.Controls.Student
@@ -18,7 +20,8 @@ namespace Porthole.Pages.Controls.Student
         {
             CurrentStudent = (Models.Student)Session["Account"];
 
-            if (!Page.IsPostBack) {
+            if (!Page.IsPostBack)
+            {
                 Egg = Eggs[new Random().Next(Eggs.Count)];
                 txtTitle.Attributes.Add("placeholder", "like " + Egg + " or something weird");
 
@@ -29,12 +32,14 @@ namespace Porthole.Pages.Controls.Student
         public void txtTitle_TextChanged(Object sender, EventArgs e)
         {
             lTitle.Text = txtTitle.Text;
+            figPoster.Attributes["data-initial"] = String.Join("", txtTitle.Text.Split(' ').Select(t => t.Substring(0, 1)).ToList()).ToUpper();
         }
 
         public void btnReset_Click(Object sender, EventArgs e)
         {
             txtTitle.Text = string.Empty;
             txtDescription.Text = string.Empty;
+            fuPoster.Dispose();
         }
 
         public void btnSubmit_Click(Object sender, EventArgs e)
@@ -47,6 +52,20 @@ namespace Porthole.Pages.Controls.Student
                     Description = txtDescription.Text,
                     ProjectMembers = new List<ProjectMember>()
                 };
+
+                if (fuPoster.HasFile)
+                {
+                    try
+                    {
+                        string filename = Guid.NewGuid().ToString();
+                        fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
+                        project.Poster = filename;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
 
                 project.ProjectMembers.Add(new ProjectMember()
                 {

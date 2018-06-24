@@ -44,5 +44,5 @@ Thumbs.db
 *.dotCover
 
 # Upload Content
-Content/**/*
-!Content/**/.gitkeep 
+*/Content/**/*
+!*/Content/**/.gitkeep 

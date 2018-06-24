@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -35,6 +36,7 @@ namespace Porthole.Pages.Controls.Student
             txtTitle.Text = CurrentProject.Title;
             txtDescription.Text = CurrentProject.Description;
             txtReflections.Text = CurrentProject.ProjectMembers.Single(m => m.Student.ID == CurrentStudent.ID).Reflection;
+            fuPoster.Dispose();
 
             cblCollaborators.Items.Clear();
             using (var context = new DatabaseContext())
@@ -94,6 +96,21 @@ namespace Porthole.Pages.Controls.Student
 
                 project.Title = txtTitle.Text;
                 project.Description = txtDescription.Text;
+
+                if (fuPoster.HasFile)
+                {
+                    try
+                    {
+                        string filename = Path.GetFileName(fuPoster.FileName);
+
+                        fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
+                        project.Poster = filename;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
 
                 project.ProjectMembers.Clear();
                 foreach (ListItem item in cblCollaborators.Items)

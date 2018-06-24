@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
-        <img src="" class="avatar avatar-main" alt="avatar">
+        <img src="/Content/Posters/<%= CurrentProject.Poster %>" class="avatar avatar-main" alt="avatar">
     </div>
     <div class="tile-content">
         <h1><asp:Literal ID="lTitle" runat="server"></asp:Literal></h1>
@@ -27,6 +27,15 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:TextBox runat="server" class="form-input" id="txtDescription" placeholder="tell us a lil' bit about the project" TextMode="MultiLine" Rows="8"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
+                    <label class="form-label" for="fuPoster">poster</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                    <asp:FileUpload id="fuPoster" runat="server" />
                 </div>
             </div>
 

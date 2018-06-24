@@ -15,11 +15,15 @@ namespace Porthole.Pages.Controls.Student {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl figPoster;
+		
 		protected System.Web.UI.WebControls.Literal lTitle;
 		
 		protected System.Web.UI.WebControls.TextBox txtTitle;
 		
 		protected System.Web.UI.WebControls.TextBox txtDescription;
+		
+		protected System.Web.UI.WebControls.FileUpload fuPoster;
 		
 		protected System.Web.UI.WebControls.TextBox txtReflections;
 		
