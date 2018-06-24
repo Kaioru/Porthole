@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Porthole.Utils
 {
     public static class DisplayUtils

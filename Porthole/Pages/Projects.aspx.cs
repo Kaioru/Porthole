@@ -6,19 +6,19 @@ using System.Web.UI;
 using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
 
-namespace Porthole.Pages 
-{   
+namespace Porthole.Pages
+{
     public partial class Projects : System.Web.UI.Page
     {
-		public List<Models.Project> PublicProjects { get; set; } = new List<Models.Project>();
+        public List<Models.Project> PublicProjects { get; set; } = new List<Models.Project>();
 
-		protected void Page_Load(object sender, EventArgs e)
-		{
-			using (var context = new DatabaseContext())
-			{
-				this.PublicProjects = context.Project
-					.ToList();
-			}
-		}
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            using (var context = new DatabaseContext())
+            {
+                this.PublicProjects = context.Project
+                    .ToList();
+            }
+        }
     }
 }

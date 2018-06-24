@@ -9,10 +9,10 @@
 //------------------------------------------------------------------------------
 
 namespace Porthole.Pages {
-    
-    
-    public partial class Projects {
-        
-        protected System.Web.UI.WebControls.Content Content1;
-    }
+	
+	
+	public partial class Projects {
+		
+		protected System.Web.UI.WebControls.Content Content1;
+	}
 }
