@@ -76,7 +76,9 @@
                                     </small>
                                 <% } %>
                             </p>
-                            <small class="text-gray">'<%= pivot.Reflection %>'</small>
+                            <% if (pivot.Reflection != null) { %>
+                                <small class="text-gray">'<%= pivot.Reflection %>'</small>
+                            <% } %>
                         </div>
                     </a>
                 <% } %>
