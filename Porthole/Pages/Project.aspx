@@ -85,7 +85,7 @@
             <% } %>
         </div>
         <%@ Import Namespace="System.Linq" %>
-        <% var privateCount = CurrentProject.ProjectMembers.Count(pm => pm.Student.Status.Equals("Y")); %>
+        <% var privateCount = CurrentProject.ProjectMembers.Count(pm => pm.Student.Status.Equals("N")); %>
         <% if (privateCount > 0) { %>
             <small class="text-gray">..and <%= privateCount %> more private collaborators</small>
         <% } %>

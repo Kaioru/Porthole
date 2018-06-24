@@ -17,6 +17,11 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -276,24 +281,28 @@
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProjects.aspx.cs">
       <DependentUpon>UpdateProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProjects.aspx.designer.cs">
       <DependentUpon>UpdateProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Student\CreateProject.aspx.cs">
       <DependentUpon>CreateProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Student\CreateProject.aspx.designer.cs">
       <DependentUpon>CreateProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProject.aspx.cs">
       <DependentUpon>UpdateProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProject.aspx.designer.cs">
       <DependentUpon>UpdateProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProjectReflections.aspx.cs">
       <DependentUpon>UpdateProjectReflections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Student\UpdateProjectReflections.aspx.designer.cs">
       <DependentUpon>UpdateProjectReflections.aspx</DependentUpon>
@@ -303,11 +312,6 @@
   <ItemGroup>
     <Folder Include="Pages\Controls\Mentor\" />
     <Folder Include="Pages\Controls\Parent\" />
-    <Folder Include="Content\" />
-    <Folder Include="Content\Avatars\" />
-    <Folder Include="Content\Posters\" />
-    <Folder Include="Content\Chips\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -345,4 +349,5 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\WebApplications\Microsoft.WebApplication.targets" />
 </Project>

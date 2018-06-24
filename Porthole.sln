@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porthole", "Porthole\Porthole.csproj", "{66CB0AC1-EDC2-48ED-950F-D446012CC6A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porthole.Tests", "Porthole.Tests\Porthole.Tests.csproj", "{F4EA153C-B2CF-44B1-A7E9-EA1E33C2F09D}"
@@ -19,5 +20,11 @@ Global
 		{F4EA153C-B2CF-44B1-A7E9-EA1E33C2F09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4EA153C-B2CF-44B1-A7E9-EA1E33C2F09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4EA153C-B2CF-44B1-A7E9-EA1E33C2F09D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F1D981A-A1CD-48D1-8609-DED9D95FE5B2}
 	EndGlobalSection
 EndGlobal
