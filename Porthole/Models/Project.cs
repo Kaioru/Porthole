@@ -34,7 +34,7 @@ namespace Porthole.Models
         {
             get
             {
-                return DisplayUtils.TruncateAtWord(Description, 180);
+                return DisplayUtils.TruncateAtWord(Description);
             }
         }
     }

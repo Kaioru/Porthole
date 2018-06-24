@@ -6,8 +6,8 @@
     <% foreach (var project in OwnedProjects) { %>
         <div class="tile">
             <div class="tile-icon">
-                <figure class="avatar avatar-lg">
-                    <img src="/Content/Posters/<%= project.Poster %>" />
+                <figure class="avatar avatar-lg" data-initial="<%= project.Initials %>">
+                    <img src="/Content/Posters/<%= project.Poster %>" onerror="this.style.display='none'">
                 </figure>
             </div>
             <div class="tile-content">
@@ -34,8 +34,8 @@
     <% foreach (var project in RelatedProjects) { %>
         <div class="tile">
             <div class="tile-icon">
-                <figure class="avatar avatar-lg">
-                    <img src="/Content/Posters/<%= project.Poster %>" />
+                <figure class="avatar avatar-lg" data-initial="<%= project.Initials %>">
+                    <img src="/Content/Posters/<%= project.Poster %>" onerror="this.style.display='none'">
                 </figure>
             </div>
             <div class="tile-content">

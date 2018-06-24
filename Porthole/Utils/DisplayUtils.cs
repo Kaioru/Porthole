@@ -6,7 +6,7 @@ namespace Porthole.Utils
 {
     public static class DisplayUtils
     {
-        public static string TruncateAtWord(string value, int length)
+        public static string TruncateAtWord(string value, int length = 180)
         {
             if (value == null || value.Length < length || value.IndexOf(" ", length, StringComparison.Ordinal) == -1)
                 return value;

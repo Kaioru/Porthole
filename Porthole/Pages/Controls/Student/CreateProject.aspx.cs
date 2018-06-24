@@ -36,6 +36,11 @@ namespace Porthole.Pages.Controls.Student
             figPoster.Attributes["data-initial"] = DisplayUtils.GetInitials(txtTitle.Text);
         }
 
+        public void txtDescription_TextChanged(Object sender, EventArgs e)
+        {
+            lDescription.Text = DisplayUtils.TruncateAtWord(txtDescription.Text);
+        }
+
         public void btnReset_Click(Object sender, EventArgs e)
         {
             txtTitle.Text = string.Empty;

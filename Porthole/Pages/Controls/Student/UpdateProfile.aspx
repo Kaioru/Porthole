@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
-        <img src="<%= CurrentStudent.Photo %>" class="avatar avatar-main" alt="avatar">
+        <figure class="avatar avatar-main" data-initial="<%= CurrentStudent.Initials %>">
+            <img src="/Content/Avatars/<%= CurrentStudent.Photo %>" onerror="this.style.display='none'">
+        </figure>
     </div>
     <div class="tile-content">
         <h1><%= CurrentStudent.Name %></h1>

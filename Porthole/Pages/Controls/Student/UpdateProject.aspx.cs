@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.EntityFrameworkCore;
 using Porthole.Models;
+using Porthole.Utils;
 
 namespace Porthole.Pages.Controls.Student
 {
@@ -62,6 +63,11 @@ namespace Porthole.Pages.Controls.Student
         public void txtTitle_TextChanged(Object sender, EventArgs e)
         {
             lTitle.Text = txtTitle.Text;
+        }
+
+        public void txtDescription_TextChanged(Object sender, EventArgs e)
+        {
+            lDescription.Text = DisplayUtils.TruncateAtWord(txtDescription.Text);
         }
 
         public void btnReset_Click(Object sender, EventArgs e)

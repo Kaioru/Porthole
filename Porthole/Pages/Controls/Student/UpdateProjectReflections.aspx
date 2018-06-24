@@ -1,11 +1,12 @@
 ﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProjectReflections" CodeBehind="~/UpdateProjectReflections.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
-    <div class="tile-icon">
-        <img src="" class="avatar avatar-main" alt="avatar">
-    </div>
+    <figure class="avatar avatar-main" data-initial="<%= CurrentProject.Initials %>">
+        <img src="/Content/Posters/<%= CurrentProject.Poster %>" onerror="this.style.display='none'">
+    </figure>
     <div class="tile-content">
         <h1><%= CurrentProject.Title %></h1>
+        <p class="tile-subtitle text-gray"><%= CurrentProject.ShortDescription %></p>
     </div>
 </div>
 
