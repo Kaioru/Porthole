@@ -96,6 +96,10 @@
                                     <span class="chip">Owner</span>
                                 </small>
                                 <% } %>
+                                <% if (pivot.Reflection != null) { %>
+                                    <br />
+                                    <small class="text-gray">'<%= pivot.Reflection %>'</small>
+                                <% } %>
                             </p>
                             <p class="tile-subtitle text-gray"><%= project.Description %></p>
                             <div class="d-inline">
