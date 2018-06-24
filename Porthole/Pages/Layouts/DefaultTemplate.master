@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="server">
 <header class="navbar">
     <section class="navbar-section">
-        <a href="/Pages/Students.aspx" class="navbar-brand mr-2">Porthole</a>
+        <a href="/Pages/Home.aspx" class="navbar-brand mr-2">Porthole</a>
         <a href="/Pages/Students.aspx" class="btn btn-link">Portfolios</a>
         <a href="/Pages/Projects.aspx" class="btn btn-link">Projects</a>
     </section>
