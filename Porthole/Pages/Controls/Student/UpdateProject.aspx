@@ -58,7 +58,7 @@
                     <label class="form-label" for="txtReflections">reflections</label>
                 </div>
                 <div class="col-9 col-sm-12">
-                    <asp:TextBox runat="server" class="form-input" id="txtReflections"></asp:TextBox>
+                    <asp:TextBox runat="server" class="form-input" id="txtReflections" placeholder="he who reflects is a mirror"></asp:TextBox>
                 </div>
             </div>
 
