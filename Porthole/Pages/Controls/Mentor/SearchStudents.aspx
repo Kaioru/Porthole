@@ -61,6 +61,14 @@
             <% } %>
             </div>
         <% } %>
+    <% } else { %>
+        <div class="empty">
+            <div class="empty-icon">
+            <i class="icon icon-people"></i>
+            </div>
+            <p class="empty-title h5">no students found.</p>
+            <p class="empty-subtitle">maybe your criterias are too much.</p>
+        </div>
     <% } %>
 <% } %>
 </asp:Content>
