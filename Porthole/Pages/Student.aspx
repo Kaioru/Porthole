@@ -71,7 +71,7 @@
                 <h2>skills</h2>
                 <% foreach (var pivot in CurrentStudent.StudentSkillSets) { %>
                     <% var skillset = pivot.SkillSet; %>
-                    <div class="chip">
+                    <div class="chip"> 
                         <figure class="avatar avatar-sm" data-initial="<%= skillset.Initials %>">
                             <img src="/Content/Chips/<%= skillset.Name %>" onerror="this.style.display='none'">
                         </figure>

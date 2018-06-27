@@ -43,8 +43,8 @@ namespace Porthole.Pages
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "publicize portfolios",
-                    Redirect = ""
+                    Option = "publicize student",
+                    Redirect = "/Pages/Controls/Mentor/PublicizeStudent.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
