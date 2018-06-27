@@ -8,21 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Porthole.Pages.Controls.Mentor {
-	
-	
-	public partial class SearchStudents {
-		
-		protected System.Web.UI.WebControls.Content Content1;
-		
-		protected System.Web.UI.WebControls.TextBox txtName;
-		
-		protected System.Web.UI.WebControls.CheckBoxList cblSkills;
-		
-		protected System.Web.UI.WebControls.CheckBox cbMentees;
-		
-		protected System.Web.UI.WebControls.Button btnReset;
-		
-		protected System.Web.UI.WebControls.Button btnFilter;
-	}
+namespace Porthole.Pages.Controls.Mentor
+{
+
+
+    public partial class SearchStudents
+    {
+
+        protected System.Web.UI.WebControls.Content Content1;
+
+        protected System.Web.UI.WebControls.TextBox txtName;
+
+        protected System.Web.UI.WebControls.TextBox txtCourse;
+
+        protected System.Web.UI.WebControls.CheckBoxList cblSkills;
+
+        protected System.Web.UI.WebControls.CheckBox cbMentees;
+
+        protected System.Web.UI.WebControls.Button btnReset;
+
+        protected System.Web.UI.WebControls.Button btnFilter;
+    }
 }

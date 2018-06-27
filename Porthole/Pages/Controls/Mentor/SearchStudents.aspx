@@ -14,6 +14,15 @@
 
             <div class="form-group">
                 <div class="col-3 col-sm-12">
+                    <label class="form-label" for="txtCourse">course</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                <asp:TextBox runat="server" class="form-input" id="txtCourse" placeholder="where he from?"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
                     <label class="form-label" for="cblSkills">skills</label>
                 </div>
                 <div class="col-9 col-sm-12">
@@ -56,6 +65,7 @@
                     </div>
                     <div class="tile-content">
                         <p class="tile-title"><%= student.Name %></p>
+                        <small class="text-gray"><%= student.Course %></small>
                     </div>
                 </a>
             <% } %>

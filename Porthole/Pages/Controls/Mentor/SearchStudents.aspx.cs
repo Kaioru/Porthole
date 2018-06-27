@@ -29,6 +29,7 @@ namespace Porthole.Pages.Controls.Mentor
                     using (var context = new DatabaseContext())
                     {
                         string name = Request.QueryString["name"].ToLower();
+                        string course = Request.QueryString["course"].ToLower();
                         bool menteeOnly = Request.QueryString["mentee_only"].Equals("True");
                         List<int> skills = Request.QueryString["skills"].Length > 0 ? Request.QueryString["skills"].Split(',').Select(int.Parse).ToList() : new List<int>();
 
@@ -36,7 +37,8 @@ namespace Porthole.Pages.Controls.Mentor
                                            .Include(s => s.StudentSkillSets)
                                            .ThenInclude(ss => ss.SkillSet)
                                            .Include(s => s.Mentor)
-                                           .Where(s => s.Name.ToLower().Contains(name));
+                                           .Where(s => s.Name.ToLower().Contains(name))
+                                           .Where(s => s.Course.ToLower().Contains(course));
 
                         if (skills.Count > 0) query = query.Where(s => s.StudentSkillSets.Any(ss => skills.Contains(ss.SkillSet.ID)));
                         if (menteeOnly) query = query.Where(s => s.Mentor.ID == CurrentMentor.ID);
@@ -50,6 +52,7 @@ namespace Porthole.Pages.Controls.Mentor
         public void Reset()
         {
             txtName.Text = IsSearch ? Request.QueryString["name"] : string.Empty;
+            txtCourse.Text = IsSearch ? Request.QueryString["course"] : string.Empty;
             cbMentees.Checked = IsSearch && Request.QueryString["mentee_only"].Equals("True");
 
             List<int> skills = IsSearch ? Request.QueryString["skills"].Length > 0 ? Request.QueryString["skills"].Split(',').Select(int.Parse).ToList() : new List<int>() : new List<int>();
@@ -86,6 +89,7 @@ namespace Porthole.Pages.Controls.Mentor
 
             queries += "search=True&";
             queries += "name=" + Server.UrlEncode(txtName.Text) + "&";
+            queries += "course=" + Server.UrlEncode(txtCourse.Text) + "&";
             queries += "skills=" + Server.UrlEncode(String.Join(",", skills)) + "&";
             queries += "mentee_only=" + cbMentees.Checked;
 
