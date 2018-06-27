@@ -322,6 +322,7 @@
     <Compile Include="Pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Controls\Mentor\" />
