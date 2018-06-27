@@ -60,6 +60,13 @@ namespace Porthole.Pages.Layouts
                 Previous = settings
             });
 
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "search students",
+                Page = "/Pages/Controls/Mentor/SearchStudents.aspx",
+                Previous = settings
+            });
+
             this.Crumbs.Add(new Crumb
             {
                 Title = "update profile",

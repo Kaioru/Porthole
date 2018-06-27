@@ -62,7 +62,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "search students",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/SearchStudents.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {

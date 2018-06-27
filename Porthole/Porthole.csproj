@@ -182,6 +182,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\Controls\Mentor\PublicizeStudent.aspx" />
+    <Content Include="Pages\Controls\Mentor\SearchStudents.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -328,6 +329,12 @@
     </Compile>
     <Compile Include="Pages\Controls\Mentor\PublicizeStudent.aspx.designer.cs">
       <DependentUpon>PublicizeStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\SearchStudents.aspx.cs">
+      <DependentUpon>SearchStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\SearchStudents.aspx.designer.cs">
+      <DependentUpon>SearchStudents.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
