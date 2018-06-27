@@ -14,17 +14,6 @@ namespace Porthole.Pages
         {
             this.Account = (IAccount)Session["Account"];
 
-            if (Account is Admin)
-            {
-                this.AccountType = "admin";
-                this.Options.Add(new SettingsOption
-                {
-                    Icon = "",
-                    Option = "create account",
-                    Redirect = "Controls/Admin/CreateAccount.aspx"
-                });
-            }
-
             if (Account is Models.Student)
             {
                 this.AccountType = "student";

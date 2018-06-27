@@ -55,13 +55,6 @@ namespace Porthole.Pages.Layouts
 
             this.Crumbs.Add(new Crumb
             {
-                Title = "create account",
-                Page = "/Pages/Controls/Admin/CreateAccount.aspx",
-                Previous = settings
-            });
-
-            this.Crumbs.Add(new Crumb
-            {
                 Title = "update profile",
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",
                 Previous = settings
@@ -93,7 +86,6 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Student/UpdateProjectReflections.aspx",
                 Previous = updateProjects
             });
-
         }
 
         protected void Page_Load(object sender, EventArgs e)
