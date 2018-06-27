@@ -33,7 +33,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "view suggestions",
-                    Redirect = ""
+                    Redirect = "Controls/Student/ViewSuggestions.aspx"
                 });
             }
 

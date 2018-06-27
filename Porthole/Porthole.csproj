@@ -185,6 +185,7 @@
     <Content Include="Pages\Controls\Mentor\SearchStudents.aspx" />
     <Content Include="Pages\Controls\Mentor\ChangePassword.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\Controls\Student\ViewSuggestions.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -349,6 +350,12 @@
     </Compile>
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.designer.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
