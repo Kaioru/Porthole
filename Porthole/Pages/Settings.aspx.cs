@@ -68,7 +68,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "change password",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ChangePassword.aspx"
                 });
             }
 

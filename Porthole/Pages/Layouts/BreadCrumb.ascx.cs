@@ -67,6 +67,13 @@ namespace Porthole.Pages.Layouts
                 Previous = settings
             });
 
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "change password",
+                Page = "/Pages/Controls/Mentor/ChangePassword.aspx",
+                Previous = settings
+            });
+
             this.Crumbs.Add(new Crumb
             {
                 Title = "update profile",
