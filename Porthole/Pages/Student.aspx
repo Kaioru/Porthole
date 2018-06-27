@@ -15,6 +15,7 @@
 
         <div class="sidebar-container">
             <h2><%= CurrentStudent.Name %></h2>
+            <p class="text-gray"><%= CurrentStudent.Course %></p>
         </div>
 
         <div class="sidebar-container">
