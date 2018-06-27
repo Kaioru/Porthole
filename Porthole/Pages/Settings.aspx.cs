@@ -55,7 +55,7 @@ namespace Porthole.Pages
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "view mentees",
+                    Option = "view messages",
                     Redirect = ""
                 });
                 this.Options.Add(new SettingsOption
