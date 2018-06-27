@@ -64,8 +64,6 @@ namespace Porthole.Pages.Controls.Admin
         {
             lblMentor.Visible = !rbMentor.Checked;
             ddlMentor.Visible = !rbMentor.Checked;
-
-
         }
 
         protected void rbStudent_CheckedChanged(object sender, EventArgs e)

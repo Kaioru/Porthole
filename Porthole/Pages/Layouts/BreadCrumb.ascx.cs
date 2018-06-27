@@ -62,6 +62,13 @@ namespace Porthole.Pages.Layouts
 
             this.Crumbs.Add(new Crumb
             {
+                Title = "create skillset",
+                Page = "/Pages/Controls/Admin/CreateSkillset.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(new Crumb
+            {
                 Title = "update profile",
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",
                 Previous = settings

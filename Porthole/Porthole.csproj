@@ -5,6 +5,9 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -157,6 +160,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
+    <Content Include="Pages\Controls\Admin\CreateSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\UpdateProfile.aspx" />
+    <Content Include="Pages\Controls\Admin\UpdateSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\ViewSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\ViewStudent.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -210,6 +218,41 @@
     </Compile>
     <Compile Include="Pages\Controls\Admin\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\CreateSkillset.aspx.cs">
+      <DependentUpon>CreateSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\CreateSkillset.aspx.designer.cs">
+      <DependentUpon>CreateSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateSkillset.aspx.cs">
+      <DependentUpon>UpdateSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateSkillset.aspx.designer.cs">
+      <DependentUpon>UpdateSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewSkillset.aspx.cs">
+      <DependentUpon>ViewSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewSkillset.aspx.designer.cs">
+      <DependentUpon>ViewSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewStudent.aspx.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewStudent.aspx.designer.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -376,6 +419,9 @@
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:51137/" workingDir="" />
+          </servers>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

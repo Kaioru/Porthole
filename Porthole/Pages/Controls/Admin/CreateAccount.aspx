@@ -7,8 +7,8 @@
                     <label class="form-label">Account type</label>
                 </div>
                 <div class="col-9 col-sm-12">
-                    <asp:RadioButton ID="rbMentor" runat="server" GroupName="AccountType" Text="Mentor" OnCheckedChanged="rbMentor_CheckedChanged" AutoPostBack="true"/> 
-                    <asp:RadioButton ID="rbStudent" runat="server" GroupName="AccountType" Text="Student" OnCheckedChanged="rbStudent_CheckedChanged" AutoPostBack="true"/>
+                    <asp:RadioButton id="rbMentor" runat="server" GroupName="AccountType" Text="Mentor" OnCheckedChanged="rbMentor_CheckedChanged" AutoPostBack="true"/> 
+                    <asp:RadioButton id="rbStudent" runat="server" GroupName="AccountType" Text="Student" OnCheckedChanged="rbStudent_CheckedChanged" AutoPostBack="true"/>
                     <br />
                     
                     
@@ -45,14 +45,14 @@
                     <asp:Label class="form-label"  for="input-example-1" ID="lblMentor" runat="server" Text="Mentor"></asp:Label>
                     </strong>&nbsp;</div>
                 <div class="col-9 col-sm-12" >
-                    <asp:DropDownList class="form-select" ID="ddlMentor" runat="server">
+                    <asp:DropDownList class="form-select" id="ddlMentor" runat="server">
                     </asp:DropDownList>
                 </div>
                 </div>
             <div class="form-group">
                 <div class="col-3 col-sm-12"></div>
                 <div class="col-9 col-sm-12">
-                    <asp:Button runat="server" id="btnCreate" class="btn btn-primary" Text="Create Account" OnClick="btnCreate_Click" />
+                    <asp:Button runat="server" id="btnCreate" class="btn btn-primary" Text="Create" OnClick="btnCreate_Click" />
                 </div>
             </div>
         </form>
