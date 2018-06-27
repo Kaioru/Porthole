@@ -14,5 +14,7 @@ namespace Porthole.Pages.Controls.Mentor {
 	public partial class PublicizeStudent {
 		
 		protected System.Web.UI.WebControls.Content Content1;
+		
+		protected System.Web.UI.WebControls.CheckBoxList cblStudents;
 	}
 }
