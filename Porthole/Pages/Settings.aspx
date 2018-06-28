@@ -3,7 +3,11 @@
 <div class="tile tile-centered">
     <div class="tile-icon">
         <figure class="avatar avatar-main" data-initial="<%= Account.Initials %>">
-            <img src="" onerror="this.style.display='none'">
+            <%@ Import Namespace="Porthole.Models" %>
+            <% if (Account is Student) { %>
+                <% var student = Account as Student; %>
+                <img src="/Content/Avatars/<%= student.Photo %>" onerror="this.style.display='none'">
+            <% } %>
         </figure>
     </div>
     <div class="tile-content">
