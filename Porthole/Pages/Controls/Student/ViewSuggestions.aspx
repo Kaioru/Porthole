@@ -9,7 +9,10 @@
             </figure>
         </div>
         <div class="tile-content">
-            <p class="tile-title"><%= suggestion.Mentor.Name %></p>
+            <p class="tile-title"><%= suggestion.Mentor.Name %>
+                <br />
+                <small class="text-gray"><%= suggestion.DateCreated.ToString("dd MMM yy, hh:mm tt") %></small>
+            </p>
             <p class="tile-subtitle text-gray col-10"><%= suggestion.Description %></p>
         </div>
         <div class="tile-action">
@@ -30,7 +33,10 @@
             </figure>
         </div>
         <div class="tile-content">
-            <p class="tile-title"><%= suggestion.Mentor.Name %></p>
+            <p class="tile-title"><%= suggestion.Mentor.Name %>
+                <br />
+                <small class="text-gray"><%= suggestion.DateCreated.ToString("dd MMM yy, hh:mm tt") %></small>
+            </p>
             <p class="tile-subtitle text-gray col-10"><%= suggestion.Description %></p>
         </div>
     </div>

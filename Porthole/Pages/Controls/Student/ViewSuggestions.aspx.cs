@@ -40,6 +40,9 @@ namespace Porthole.Pages.Controls.Student
                                                          .ToList();
                 this.NewSuggestions = allSuggestions.FindAll(s => s.Status.Equals("N"));
                 this.OldSuggestions = allSuggestions.FindAll(s => !NewSuggestions.Contains(s));
+
+                this.NewSuggestions.Reverse();
+                this.OldSuggestions.Reverse();
             }
         }
     }
