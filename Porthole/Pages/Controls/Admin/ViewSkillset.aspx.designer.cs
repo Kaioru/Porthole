@@ -10,6 +10,6 @@
 namespace Porthole.Pages.Controls.Admin {
     
     
-    public partial class CreateAccount {
+    public partial class ViewSkillset {
     }
 }

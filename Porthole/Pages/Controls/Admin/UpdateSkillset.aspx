@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" AutoEventWireup="true" CodeBehind="UpdateSkillset.aspx.cs" Inherits="Porthole.Pages.Controls.Admin.CreateAccount" %>
+﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" AutoEventWireup="true" CodeBehind="UpdateSkillset.aspx.cs" Inherits="Porthole.Pages.Controls.Admin.UpdateSkillset" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
     <div class="container">
-        <form id="form1" runat="server">
+        <form id="fCreateSkill" runat="server">
 
             <div class="form-group">
                 <div class="col-3 col-sm-12">
@@ -12,17 +12,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-3 col-sm-12">
-                    <label class="form-label" for="fuLogo">Logo</label>
-                </div>
-                <div class="col-9 col-sm-12">
-                    <asp:FileUpload ID="fuNewLogo" runat="server" placeholder="New Logo"/>
-                </div>
-            </div>
-            <div class="form-group">
                 <div class="col-3 col-sm-12"></div>
                 <div class="col-9 col-sm-12">
-                    <asp:Button runat="server" id="btnUpdateSkillset" class="btn btn-success" Text="Update"/>
+                    <asp:Button runat="server" id="btnUpdateSkillset" class="btn btn-primary" Text="Update" OnClick="btnUpdateSkillset_Click"/>
                 </div>
             </div>
         </form>

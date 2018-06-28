@@ -10,7 +10,7 @@
 namespace Porthole.Pages.Controls.Admin {
     
     
-    public partial class CreateAccount {
+    public partial class CreateSkillset {
         
         /// <summary>
         /// txtSkillName control.
@@ -20,15 +20,6 @@ namespace Porthole.Pages.Controls.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSkillName;
-        
-        /// <summary>
-        /// fuIcon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuIcon;
         
         /// <summary>
         /// btnCreateSkill control.

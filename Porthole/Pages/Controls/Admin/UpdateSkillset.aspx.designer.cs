@@ -10,34 +10,25 @@
 namespace Porthole.Pages.Controls.Admin {
     
     
-    public partial class CreateAccount {
+    public partial class UpdateSkillset {
         
         /// <summary>
-        /// form1 control.
+        /// fCreateSkill control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm fCreateSkill;
         
         /// <summary>
-        /// txtName control.
+        /// txtNewSkillName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-        
-        /// <summary>
-        /// fuLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuLogo;
+        protected global::System.Web.UI.WebControls.TextBox txtNewSkillName;
         
         /// <summary>
         /// btnUpdateSkillset control.

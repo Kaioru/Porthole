@@ -23,12 +23,19 @@ namespace Porthole.Pages
                     Option = "create account",
                     Redirect = "Controls/Admin/CreateAccount.aspx"
                 });
+                
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "view student",
+                    Redirect = "Controls/Admin/ViewStudent.aspx"
+                });
 
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "create skillset",
-                    Redirect = "Controls/Admin/CreateSkillset.aspx"
+                    Option = "view skillset",
+                    Redirect = "Controls/Admin/ViewSkillset.aspx"
                 });
             }
 

@@ -55,15 +55,15 @@ namespace Porthole.Pages.Layouts
 
             this.Crumbs.Add(new Crumb
             {
-                Title = "create account",
-                Page = "/Pages/Controls/Admin/CreateAccount.aspx",
+                Title = "view skillset",
+                Page = "/Pages/Controls/Admin/ViewSkillset.aspx",
                 Previous = settings
             });
 
             this.Crumbs.Add(new Crumb
             {
-                Title = "create skillset",
-                Page = "/Pages/Controls/Admin/CreateSkillset.aspx",
+                Title = "view student",
+                Page = "/Pages/Controls/Admin/ViewStudent.aspx",
                 Previous = settings
             });
 
@@ -72,6 +72,43 @@ namespace Porthole.Pages.Layouts
                 Title = "update profile",
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",
                 Previous = settings
+            });
+
+            Crumb viewSkillsets = new Crumb
+            {
+                Title = "view skillsets",
+                Page = "/Pages/Controls/Admin/ViewSkillset.aspx",
+                Previous = settings
+            };
+
+            this.Crumbs.Add(viewSkillsets);
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "update skillset",
+                Page = "/Pages/Controls/Admin/UpdateSkillset.aspx",
+                Previous = viewSkillsets
+            });
+
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "create skillset",
+                Page = "/Pages/Controls/Admin/CreateSkillset.aspx",
+                Previous = viewSkillsets
+            });
+
+            Crumb viewStudents = new Crumb
+            {
+                Title = "view students",
+                Page = "/Pages/Controls/Admin/ViewStudents.aspx",
+                Previous = settings
+            };
+
+            this.Crumbs.Add(viewStudents);
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "update profile",
+                Page = "/Pages/Controls/Admin/UpdateProfile.aspx",
+                Previous = viewStudents
             });
 
             Crumb updateProjects = new Crumb

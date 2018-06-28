@@ -10,7 +10,7 @@
 namespace Porthole.Pages.Controls.Admin {
     
     
-    public partial class CreateAccount {
+    public partial class UpdateProfile {
         
         /// <summary>
         /// fuLogo control.

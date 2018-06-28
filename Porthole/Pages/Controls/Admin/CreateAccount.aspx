@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="Porthole.Pages.Controls.Admin.CreateAccount" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
     <div class="container">
-        <form id="form1" runat="server">
+        <form id="fCreateAcc" runat="server">
             <div class="form-group">
                 <div class="col-3 col-sm-12">
                     <label class="form-label">Account type</label>
