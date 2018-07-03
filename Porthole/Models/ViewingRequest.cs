@@ -9,11 +9,16 @@ namespace Porthole.Models
 		[Key]
         [Column("ViewingRequestID")]
         public int ID { get; set; }
+
 		public string StudentName { get; set; }
+
         public string Status { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime DateCreated { get; set; }
 
-		public Parent Parent { get; set; }
+        public Parent Parent { get; set; }
+
 		public Student Student { get; set; }
     }
 }

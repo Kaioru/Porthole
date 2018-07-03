@@ -150,6 +150,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -202,6 +203,13 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
+    <Compile Include="Pages\Controls\Parent\SendRequest.aspx.cs">
+      <DependentUpon>SendRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\SendRequest.aspx.designer.cs">
+      <DependentUpon>SendRequest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,10 +366,7 @@
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Controls\Mentor\" />
-    <Folder Include="Pages\Controls\Parent\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -72,20 +72,21 @@ namespace Porthole.Pages
                 });
             }
 
-            if (Account is Parent)
+
+            if (Account is Parent) // Parents are automaatically redirected to the Settings.apsx where they can choose to either RequestAccess to view Portfolio or Send Message to the mentor.
             {
                 this.AccountType = "parent";
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
                     Option = "request child portfolio",
-                    Redirect = ""
+                    Redirect = "Controls/Parent/SendRequest.aspx" // This is for the parents to be redirected to another page to send Rquest to access the portfolio.
                 });
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
                     Option = "view messages",
-                    Redirect = ""
+                    Redirect = "" // Pending Advance 
                 });
             }
         }

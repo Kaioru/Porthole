@@ -121,6 +121,12 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Student/ViewSuggestions.aspx",
                 Previous = settings
             });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "send request",
+                Page = "/Pages/Controls/Parent/SendRequest.aspx",
+                Previous = settings
+            });
         }
 
         protected void Page_Load(object sender, EventArgs e)
