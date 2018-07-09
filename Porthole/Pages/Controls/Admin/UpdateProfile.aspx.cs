@@ -10,10 +10,18 @@ namespace Porthole.Pages.Controls.Admin
 {
     public partial class UpdateProfile : System.Web.UI.Page
     {
-        public Models.Student CurrentStudent { get; set; }
+        public List<Models.Student> studentList { get; set; }
+        public int id { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            CurrentStudent = (Models.Student)Session["Account"];
+            id = Convert.ToInt32(Request.QueryString["id"]);
+            if (!Page.IsPostBack)
+            {
+                using (var context = new DatabaseContext())
+                {
+                    studentList = context.Student.ToList();
+                }
+            }
         }
 
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
@@ -26,7 +34,7 @@ namespace Porthole.Pages.Controls.Admin
                     {
                         string filename = Guid.NewGuid().ToString();
                         fuLogo.SaveAs(Server.MapPath("/Content/Avatars/") + filename);
-                        CurrentStudent.Photo = filename;
+                        studentList[id].Photo = filename;
                     }
                     catch (Exception)
                     {

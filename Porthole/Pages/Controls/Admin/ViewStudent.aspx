@@ -15,7 +15,7 @@
                 <p class="tile-title"><%= student.Name %></p>
             </div>
             <div class="tile-action">
-                <a href="UpdateProfile.aspx" class="btn bg-primary">
+                <a href="UpdateProfile.aspx?id=<%= student.ID %>" class="btn bg-primary">
                     <i class="icon icon-edit"></i>
                 </a>
             </div>

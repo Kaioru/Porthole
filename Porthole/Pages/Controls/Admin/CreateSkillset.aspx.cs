@@ -19,13 +19,13 @@ namespace Porthole.Pages.Controls.Admin
         {
             using (var context = new DatabaseContext())
             {
-                Models.SkillSet skillset = new Models.SkillSet()
+                Models.SkillSet skillset = new SkillSet()
                 {
                     Name = txtSkillName.Text,
                 };
                 context.Add(skillset);
                 context.SaveChanges();
-                Response.Redirect("Pages/Controls/Admin/ViewSkillset.aspx");
+                Response.Redirect("/Pages/Controls/Admin/ViewSkillset.aspx");
             }
         }
     }
