@@ -59,7 +59,7 @@ namespace Porthole.Pages.Controls.Student
                 {
                     try
                     {
-                        string filename = Guid.NewGuid().ToString();
+                        string filename = Guid.NewGuid().ToString() + Path.GetExtension(fuPoster.FileName);
                         fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
                         project.Poster = filename;
                     }
