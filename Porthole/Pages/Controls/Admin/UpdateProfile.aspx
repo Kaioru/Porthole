@@ -16,6 +16,7 @@
                 <div class="col-3 col-sm-12"></div>
                 <div class="col-9 col-sm-12">
                     <asp:Button runat="server" id="btnUpdateProfile" class="btn btn-primary" Text="Update" OnClick="btnUpdateProfile_Click" />
+                    <asp:Label ID="lblResult" runat="server" Text=""></asp:Label>
                 </div>
             </div>
         </form>
