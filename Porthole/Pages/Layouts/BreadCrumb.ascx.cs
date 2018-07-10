@@ -31,17 +31,25 @@ namespace Porthole.Pages.Layouts
                 Previous = home
             });
 
-            this.Crumbs.Add(new Crumb
+            Crumb login = new Crumb
             {
                 Title = "login",
                 Page = "/Pages/Login.aspx",
                 Previous = home
-            });
+            };
+
+            this.Crumbs.Add(login);
             this.Crumbs.Add(new Crumb
             {
                 Title = "logout",
                 Page = "/Pages/Logout.aspx",
                 Previous = home
+            });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "register",
+                Page = "/Pages/Register.aspx",
+                Previous = login
             });
 
             Crumb settings = new Crumb
@@ -52,6 +60,27 @@ namespace Porthole.Pages.Layouts
             };
 
             this.Crumbs.Add(settings);
+
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "publicize student",
+                Page = "/Pages/Controls/Mentor/PublicizeStudent.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "search students",
+                Page = "/Pages/Controls/Mentor/SearchStudents.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "change password",
+                Page = "/Pages/Controls/Mentor/ChangePassword.aspx",
+                Previous = settings
+            });
 
             this.Crumbs.Add(new Crumb
             {
@@ -137,7 +166,12 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Student/UpdateProjectReflections.aspx",
                 Previous = updateProjects
             });
-
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "view suggestions",
+                Page = "/Pages/Controls/Student/ViewSuggestions.aspx",
+                Previous = settings
+            });
         }
 
         protected void Page_Load(object sender, EventArgs e)

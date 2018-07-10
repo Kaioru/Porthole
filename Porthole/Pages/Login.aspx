@@ -21,6 +21,8 @@
                 </div>
             </div>
 
+            <a href="/Pages/Register.aspx">are you a parent? register here!</a>
+
             <div class="form-group columns">
                 <div class="column col-9 col-sm-12">
                     <asp:Label runat="server" id="lblError" class="text-error" />

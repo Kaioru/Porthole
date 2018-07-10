@@ -14,11 +14,11 @@ namespace Porthole.Pages.Controls.Admin
         {
             if (!IsPostBack)
             {
-                using (var context = new  DatabaseContext())
+                using (var context = new DatabaseContext())
                 {
-                    List<Mentor> mentorList = context.Mentor.ToList();
+                    List<Models.Mentor> mentorList = context.Mentor.ToList();
 
-                    foreach (Mentor m in mentorList)
+                    foreach (Models.Mentor m in mentorList)
                     {
                         ddlMentor.Items.Add(m.Name);
                     }
@@ -33,7 +33,7 @@ namespace Porthole.Pages.Controls.Admin
             {
                 if (rbMentor.Checked)
                 {
-                    Mentor mentor = new Mentor()
+                    Models.Mentor mentor = new Models.Mentor()
                     {
                         Name = txtName.Text,
                         EmailAddress = txtEmail.Text,
@@ -52,7 +52,7 @@ namespace Porthole.Pages.Controls.Admin
                     };
                     context.Add(student);
                 }
-                
+
 
                 context.SaveChanges();
                 Response.Redirect("/Pages/Settings.aspx");

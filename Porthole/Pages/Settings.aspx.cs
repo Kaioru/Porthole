@@ -58,7 +58,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "view suggestions",
-                    Redirect = ""
+                    Redirect = "Controls/Student/ViewSuggestions.aspx"
                 });
             }
 
@@ -68,8 +68,8 @@ namespace Porthole.Pages
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "publicize portfolios",
-                    Redirect = ""
+                    Option = "publicize student",
+                    Redirect = "/Pages/Controls/Mentor/PublicizeStudent.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
@@ -80,20 +80,20 @@ namespace Porthole.Pages
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "view mentees",
+                    Option = "view messages",
                     Redirect = ""
                 });
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
                     Option = "search students",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/SearchStudents.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
                     Option = "change password",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ChangePassword.aspx"
                 });
             }
 

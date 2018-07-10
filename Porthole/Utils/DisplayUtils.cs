@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Porthole.Utils
 {
@@ -16,8 +17,18 @@ namespace Porthole.Utils
 
         public static string GetInitials(string value)
         {
-            List<string> list = value.Split(' ').Select(t => t.Substring(0, 1)).ToList();
-            return String.Join("", list.Count > 2 ? list.Take(2) : list).ToUpper();
+            string initials = Regex.Replace(value, @"[\p{P}\p{S}\p{C}\p{N}]+", "");
+
+            initials = Regex.Replace(initials, @"\p{Z}+", " ");
+            initials = Regex.Replace(initials.Trim(), @"\s+(?:[JS]R|I{1,3}|I[VX]|VI{0,3})$", "", RegexOptions.IgnoreCase);
+            initials = Regex.Replace(initials, @"^(\p{L})[^\s]*(?:\s+(?:\p{L}+\s+(?=\p{L}))?(?:(\p{L})\p{L}*)?)?$", "$1$2").Trim();
+
+            if (initials.Length > 2)
+            {
+                initials = initials.Substring(0, 2);
+            }
+
+            return initials.ToUpperInvariant();
         }
     }
 }

@@ -15,6 +15,7 @@
 
         <div class="sidebar-container">
             <h2><%= CurrentStudent.Name %></h2>
+            <p class="text-gray"><%= CurrentStudent.Course %></p>
         </div>
 
         <div class="sidebar-container">
@@ -71,9 +72,9 @@
                 <h2>skills</h2>
                 <% foreach (var pivot in CurrentStudent.StudentSkillSets) { %>
                     <% var skillset = pivot.SkillSet; %>
-                    <div class="chip">
+                    <div class="chip"> 
                         <figure class="avatar avatar-sm" data-initial="<%= skillset.Initials %>">
-                            <img src="/Content/Chips/<%= skillset.Name %>" onerror="this.style.display='none'">
+                            <img src="/Content/Chips/<%= skillset.ID %>" onerror="this.style.display='none'">
                         </figure>
                         &nbsp;<%= skillset.Name %>
                     </div>

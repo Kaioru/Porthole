@@ -33,7 +33,7 @@ namespace Porthole.Pages
                 if (account != null)
                 {
                     Session["Account"] = account;
-                    Response.Redirect("Students.aspx");
+                    Response.Redirect("Settings.aspx");
                 }
                 else
                 {

@@ -35,7 +35,7 @@
 <% } %>
 
 <% if (RelatedProjects.Count > 0 ) { %>
-    <div class="divider" data-content="projects you're apart of"></div>
+    <div class="divider" data-content="projects you're a part of"></div>
     <br />
     <% foreach (var project in RelatedProjects) { %>
         <div class="tile">
