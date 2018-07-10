@@ -1,7 +1,0 @@
-﻿<%@ Master Language="C#" Inherits="Porthole.Pages.Layouts.ControlTemplate" MasterPageFile="/Pages/Layouts/DefaultTemplate.master" CodeBehind="~/ControlTemplate.master.cs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="server">
-    <%@ Register Src="/Pages/Layouts/BreadCrumb.ascx" TagName="BreadCrumb" TagPrefix="partial" %> 
-    <partial:BreadCrumb runat="server" />
-    <br />
-    <asp:ContentPlaceHolder id="cphForm" runat="server" /> 
-</asp:Content>

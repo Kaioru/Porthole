@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" Inherits="Porthole.Default" CodeBehind="~/Default.aspx.cs" %>
