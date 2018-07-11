@@ -14,9 +14,6 @@ namespace Porthole.Pages.Controls.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Request.QueryString["id"]);
-            if (!Page.IsPostBack)
-            {
-            }
         }
 
         protected void btnUpdateSkillset_Click(object sender, EventArgs e)
@@ -25,7 +22,7 @@ namespace Porthole.Pages.Controls.Admin
             {
                 context.SkillSet.Single(ss => ss.ID == id).Name = txtNewSkillName.Text;
                 context.SaveChanges();
-                Response.Redirect("/Pages/Controls/Admin/ViewSkillset.aspx");
+                lblResult.Text = "Skillset updated!";
             }
         }
     }

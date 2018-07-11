@@ -91,6 +91,13 @@ namespace Porthole.Pages.Layouts
 
             this.Crumbs.Add(new Crumb
             {
+                Title = "create account",
+                Page = "/Pages/Controls/Admin/CreateAccount.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(new Crumb
+            {
                 Title = "view student",
                 Page = "/Pages/Controls/Admin/ViewStudent.aspx",
                 Previous = settings
@@ -125,19 +132,19 @@ namespace Porthole.Pages.Layouts
                 Previous = viewSkillsets
             });
 
-            Crumb viewStudents = new Crumb
+            Crumb viewStudent = new Crumb
             {
                 Title = "view students",
-                Page = "/Pages/Controls/Admin/ViewStudents.aspx",
+                Page = "/Pages/Controls/Admin/ViewStudent.aspx",
                 Previous = settings
             };
 
-            this.Crumbs.Add(viewStudents);
+            this.Crumbs.Add(viewStudent);
             this.Crumbs.Add(new Crumb
             {
                 Title = "update profile",
                 Page = "/Pages/Controls/Admin/UpdateProfile.aspx",
-                Previous = viewStudents
+                Previous = viewStudent
             });
 
             Crumb updateProjects = new Crumb
