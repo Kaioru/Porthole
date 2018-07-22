@@ -23,7 +23,7 @@ namespace Porthole.Pages
                     Option = "create account",
                     Redirect = "Controls/Admin/CreateAccount.aspx"
                 });
-                
+
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
@@ -75,7 +75,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "view suggestions",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ViewSuggestions.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
