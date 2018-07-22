@@ -37,6 +37,13 @@ namespace Porthole.Pages
                     Option = "view skillset",
                     Redirect = "Controls/Admin/ViewSkillset.aspx"
                 });
+
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "view request",
+                    Redirect = "Controls/Admin/ViewRequest.aspx"
+                });
             }
 
             if (Account is Models.Student)

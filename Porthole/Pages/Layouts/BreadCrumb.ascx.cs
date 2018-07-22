@@ -105,6 +105,13 @@ namespace Porthole.Pages.Layouts
 
             this.Crumbs.Add(new Crumb
             {
+                Title = "view request",
+                Page = "/Pages/Controls/Admin/ViewRequest.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(new Crumb
+            {
                 Title = "update profile",
                 Page = "/Pages/Controls/Student/UpdateProfile.aspx",
                 Previous = settings
