@@ -83,6 +83,21 @@ namespace Porthole.Pages.Layouts
                 Previous = viewSuggestions
             });
 
+            Crumb viewMessages = (new Crumb()
+            {
+                Title = "view messages",
+                Page = "/Pages/Controls/Mentor/ViewMessages.aspx",
+                Previous = settings
+            });
+
+            this.Crumbs.Add(viewMessages);
+            this.Crumbs.Add(new Crumb()
+            {
+                Title = "view message",
+                Page = "/Pages/Controls/Mentor/ViewMessage.aspx",
+                Previous = viewMessages
+            });
+
             this.Crumbs.Add(new Crumb()
             {
                 Title = "search students",

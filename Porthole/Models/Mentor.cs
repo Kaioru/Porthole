@@ -20,6 +20,8 @@ namespace Porthole.Models
         public ICollection<Student> Students { get; set; }
         public ICollection<Suggestion> Suggestions { get; set; }
 
+        public ICollection<Message> Messages { get; set; }
+
         [NotMapped]
         public string Initials
         {

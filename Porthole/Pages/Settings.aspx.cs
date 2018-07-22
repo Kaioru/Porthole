@@ -81,7 +81,7 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "view messages",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ViewMessages.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
