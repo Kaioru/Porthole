@@ -41,6 +41,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -150,7 +151,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Controls\Parent\Chat.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
+    <Content Include="Pages\Controls\Parent\ViewChat.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -192,6 +195,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Mentor.cs" />
@@ -203,12 +207,26 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
+    <Compile Include="Pages\Controls\Parent\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.designer.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\ViewChat.aspx.cs">
+      <DependentUpon>ViewChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\ViewChat.aspx.designer.cs">
+      <DependentUpon>ViewChat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
