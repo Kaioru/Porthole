@@ -21,6 +21,7 @@ namespace Porthole.Pages.Layouts
 
                 switch (type)
                 {
+                    case "Admin": if (Account is Admin) return; break;
                     case "Student": if (Account is Models.Student) return; break;
                     case "Mentor": if (Account is Mentor) return; break;
                     case "Parent": if (Account is Parent) return; break;

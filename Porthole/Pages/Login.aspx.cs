@@ -16,6 +16,13 @@ namespace Porthole.Pages
             {
                 List<IAccount> accounts = new List<IAccount>();
 
+                accounts.Add(new Admin
+                {
+                    ID = 1,
+                    Name = "Admin-san",
+                    EmailAddress = "admin@admin.com",
+                    Password = "123"
+                });
                 accounts.AddRange(context.Student
                                   .ToList());
                 accounts.AddRange(context.Mentor.ToList());

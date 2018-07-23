@@ -6,14 +6,16 @@ namespace Porthole.Models
 {
     public class Suggestion
     {
-		[Key]
+        [Key]
         [Column("SuggestionID")]
         public int ID { get; set; }
-		public string Description { get; set; }
-		public string Status { get; set; }
-		public DateTime DateCreated { get; set; }
+        public string Description { get; set; }
+        public string Status { get; set; }
 
-		public Mentor Mentor { get; set; }
-		public Student Student { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime DateCreated { get; set; }
+
+        public Mentor Mentor { get; set; }
+        public Student Student { get; set; }
     }
 }

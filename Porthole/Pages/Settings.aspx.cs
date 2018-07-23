@@ -14,6 +14,31 @@ namespace Porthole.Pages
         {
             this.Account = (IAccount)Session["Account"];
 
+            if (Account is Admin)
+            {
+                this.AccountType = "admin";
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "create account",
+                    Redirect = "Controls/Admin/CreateAccount.aspx"
+                });
+
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "view student",
+                    Redirect = "Controls/Admin/ViewStudent.aspx"
+                });
+
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "view skillset",
+                    Redirect = "Controls/Admin/ViewSkillset.aspx"
+                });
+            }
+
             if (Account is Models.Student)
             {
                 this.AccountType = "student";
@@ -50,13 +75,13 @@ namespace Porthole.Pages
                 {
                     Icon = "",
                     Option = "view suggestions",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ViewSuggestions.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
                     Option = "view messages",
-                    Redirect = ""
+                    Redirect = "/Pages/Controls/Mentor/ViewMessages.aspx"
                 });
                 this.Options.Add(new SettingsOption
                 {

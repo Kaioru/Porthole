@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.2.1.1\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -151,9 +159,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pages\Controls\Parent\Chat.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
-    <Content Include="Pages\Controls\Parent\ViewChat.aspx" />
+    <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
+    <Content Include="Pages\Controls\Admin\CreateSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\UpdateProfile.aspx" />
+    <Content Include="Pages\Controls\Admin\UpdateSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\ViewSkillset.aspx" />
+    <Content Include="Pages\Controls\Admin\ViewStudent.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -190,12 +202,15 @@
     <Content Include="Pages\Controls\Mentor\ChangePassword.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\Controls\Student\ViewSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\UpdateSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewMessages.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewMessage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Mentor.cs" />
@@ -207,13 +222,6 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
-    <Compile Include="Pages\Controls\Parent\Chat.aspx.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Controls\Parent\Chat.aspx.designer.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,12 +229,47 @@
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.designer.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Controls\Parent\ViewChat.aspx.cs">
-      <DependentUpon>ViewChat.aspx</DependentUpon>
+    <Compile Include="Pages\Controls\Admin\CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Controls\Parent\ViewChat.aspx.designer.cs">
-      <DependentUpon>ViewChat.aspx</DependentUpon>
+    <Compile Include="Pages\Controls\Admin\CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\CreateSkillset.aspx.cs">
+      <DependentUpon>CreateSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\CreateSkillset.aspx.designer.cs">
+      <DependentUpon>CreateSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateSkillset.aspx.cs">
+      <DependentUpon>UpdateSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateSkillset.aspx.designer.cs">
+      <DependentUpon>UpdateSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewSkillset.aspx.cs">
+      <DependentUpon>ViewSkillset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewSkillset.aspx.designer.cs">
+      <DependentUpon>ViewSkillset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewStudent.aspx.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewStudent.aspx.designer.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -343,16 +386,19 @@
     <Compile Include="Utils\DisplayUtils.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Pages\Controls\Mentor\PublicizeStudent.aspx.cs">
       <DependentUpon>PublicizeStudent.aspx</DependentUpon>
     </Compile>
@@ -383,6 +429,32 @@
     <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.designer.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.designer.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.cs">
+      <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.designer.cs">
+      <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.designer.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.designer.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Reply.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -417,9 +489,13 @@
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:51137/" workingDir="" />
+          </servers>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
 </Project>
