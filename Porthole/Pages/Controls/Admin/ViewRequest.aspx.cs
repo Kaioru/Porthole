@@ -22,10 +22,5 @@ namespace Porthole.Pages.Controls.Admin
                 }
             }            
         }
-
-        protected void btnChangeStatus_Click(object sender, EventArgs e)
-        {
-            lblResult.Text = "set to f";
-        }
     }
 }
