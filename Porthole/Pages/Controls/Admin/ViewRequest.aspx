@@ -6,16 +6,16 @@
         <hr />
         <div class="tile">
             <div class="tile-content">
-                <p class="tile-title"><%= viewrequest.Parent.Name %></p>
-                <p class="tile-title"><%= viewrequest.StudentName %></p>
+                <p class="tile-title"><%= request.Parent %></p>
+                <p class="tile-title"><%= request.StudentName %></p>
             </div>
             <div class="tile-action">
-                <a href="UpdateSkillset.aspx?id=<%=viewrequest.Student.ID %>" class="btn bg-primary">
+                <a href="UpdateStatus.aspx?id=<%= request.ID %>" class="btn">
                     <i class="icon icon-edit"></i>
                 </a>
             </div>
         </div>
         <br />
-    
+    <%} %>
     </div>
 </asp:Content>

@@ -159,6 +159,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Controls\Admin\UpdateStatus.aspx" />
     <Content Include="Pages\Controls\Admin\ViewRequest.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
@@ -219,6 +220,13 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
+    <Compile Include="Pages\Controls\Admin\UpdateStatus.aspx.cs">
+      <DependentUpon>UpdateStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\UpdateStatus.aspx.designer.cs">
+      <DependentUpon>UpdateStatus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Controls\Admin\ViewRequest.aspx.cs">
       <DependentUpon>ViewRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

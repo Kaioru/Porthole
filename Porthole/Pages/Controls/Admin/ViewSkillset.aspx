@@ -9,7 +9,7 @@
                 <p class="tile-title"><%= skill.Name %></p>
             </div>
             <div class="tile-action">
-                <a href="UpdateSkillset.aspx?id=<%=skill.ID %>" class="btn bg-primary">
+                <a href="UpdateSkillset.aspx?id=<%=skill.ID %>" class="btn">
                     <i class="icon icon-edit"></i>
                 </a>
             </div>

@@ -20,7 +20,12 @@ namespace Porthole.Pages.Controls.Admin
                 {
                     ViewingRequests = context.ViewingRequest.ToList();
                 }
-            }
+            }            
+        }
+
+        protected void btnChangeStatus_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = "set to f";
         }
     }
 }
