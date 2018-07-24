@@ -29,6 +29,29 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtPassword"
+                ErrorMessage="password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtNewPassword"
+                ErrorMessage="new password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtNewPassword2"
+                ErrorMessage="repeat password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <!-- TODO: Fix this -->
+            <asp:CompareValidator
+                    ControlToValidate="txtNewPassword2"
+                    ControlToCompare="txtNewPassword"
+                    Operator="Equal"
+                    ErrorMessage="new passwords do not match">&nbsp;
+            </asp:CompareValidator>
+            <asp:ValidationSummary runat="server" />
+        </div>
+
         <div class="text-right">
             <button class="btn">reset</button>
             <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />

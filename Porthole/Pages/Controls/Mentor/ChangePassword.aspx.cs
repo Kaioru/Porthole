@@ -17,13 +17,16 @@ namespace Porthole.Pages.Controls.Mentor
 
         public void btnSubmit_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Mentor mentor = context.Mentor
-                                       .Single(s => s.ID == CurrentMentor.ID);
+                using (var context = new DatabaseContext())
+                {
+                    Models.Mentor mentor = context.Mentor
+                                           .Single(s => s.ID == CurrentMentor.ID);
 
-                mentor.Password = txtNewPassword.Text;
-                context.SaveChanges();
+                    mentor.Password = txtNewPassword.Text;
+                    context.SaveChanges();
+                }
             }
         }
     }
