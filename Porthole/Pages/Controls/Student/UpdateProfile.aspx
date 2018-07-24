@@ -53,6 +53,22 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtDescription"
+                    ErrorMessage="about me is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtAchievement"
+                    ErrorMessage="achievements is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtURL"
+                    ErrorMessage="url is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:ValidationSummary runat="server" />
+            </div>
+
             <div class="form-group columns">
                 <div class="column col-9 col-sm-12">
                     <asp:Label runat="server" id="lblInfo" />

@@ -75,6 +75,26 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtTitle"
+                    ErrorMessage="title is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtDescription"
+                    ErrorMessage="description is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtURL"
+                    ErrorMessage="url is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtReflections"
+                    ErrorMessage="reflections is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:ValidationSummary runat="server" />
+            </div>
+
             <div class="text-right">
                 <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
                 <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />

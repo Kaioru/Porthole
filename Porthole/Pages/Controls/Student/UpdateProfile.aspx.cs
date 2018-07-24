@@ -56,39 +56,42 @@ namespace Porthole.Pages.Controls.Student
 
         public void btnSubmit_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Student student = context.Student
-                    .Include(s => s.StudentSkillSets)
-                    .ThenInclude(ss => ss.SkillSet)
-                    .Single(s => s.ID == CurrentStudent.ID);
-
-                student.Description = txtDescription.Text;
-                student.Achievement = txtAchievement.Text;
-                student.URL = txtURL.Text;
-
-                student.StudentSkillSets.Clear();
-
-                foreach (ListItem item in cblSkills.Items)
+                using (var context = new DatabaseContext())
                 {
-                    if (item.Selected)
+                    Models.Student student = context.Student
+                        .Include(s => s.StudentSkillSets)
+                        .ThenInclude(ss => ss.SkillSet)
+                        .Single(s => s.ID == CurrentStudent.ID);
+
+                    student.Description = txtDescription.Text;
+                    student.Achievement = txtAchievement.Text;
+                    student.URL = txtURL.Text;
+
+                    student.StudentSkillSets.Clear();
+
+                    foreach (ListItem item in cblSkills.Items)
                     {
-                        student.StudentSkillSets.Add(new StudentSkillSet
+                        if (item.Selected)
                         {
-                            Student = student,
-                            SkillSet = context.SkillSet
-                                              .Single(s => s.ID == Convert.ToInt32(item.Value))
-                        });
+                            student.StudentSkillSets.Add(new StudentSkillSet
+                            {
+                                Student = student,
+                                SkillSet = context.SkillSet
+                                                  .Single(s => s.ID == Convert.ToInt32(item.Value))
+                            });
+                        }
                     }
+
+                    context.SaveChanges();
+
+                    CurrentStudent = student;
+                    Session["Account"] = student;
+                    Reset();
+                    lblInfo.CssClass = "text-success";
+                    lblInfo.Text = "beep beep boop, we've updated your profile!";
                 }
-
-                context.SaveChanges();
-
-                CurrentStudent = student;
-                Session["Account"] = student;
-                Reset();
-                lblInfo.CssClass = "text-success";
-                lblInfo.Text = "beep beep boop, we've updated your profile!";
             }
         }
     }

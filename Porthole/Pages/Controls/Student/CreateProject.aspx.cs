@@ -45,42 +45,45 @@ namespace Porthole.Pages.Controls.Student
 
         public void btnSubmit_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Project project = new Models.Project()
+                using (var context = new DatabaseContext())
                 {
-                    Title = txtTitle.Text,
-                    Description = txtDescription.Text,
-                    URL = txtURL.Text,
-                    ProjectMembers = new List<ProjectMember>()
-                };
-
-                if (fuPoster.HasFile)
-                {
-                    try
+                    Models.Project project = new Models.Project()
                     {
-                        string filename = Guid.NewGuid().ToString() + Path.GetExtension(fuPoster.FileName);
-                        fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
-                        project.Poster = filename;
-                    }
-                    catch (Exception)
-                    {
+                        Title = txtTitle.Text,
+                        Description = txtDescription.Text,
+                        URL = txtURL.Text,
+                        ProjectMembers = new List<ProjectMember>()
+                    };
 
+                    if (fuPoster.HasFile)
+                    {
+                        try
+                        {
+                            string filename = Guid.NewGuid().ToString() + Path.GetExtension(fuPoster.FileName);
+                            fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
+                            project.Poster = filename;
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
+
+                    project.ProjectMembers.Add(new ProjectMember()
+                    {
+                        Project = project,
+                        Student = context.Student
+                                         .Single(s => s.ID == CurrentStudent.ID),
+                        Role = "Leader",
+                        Reflection = txtReflections.Text
+                    });
+                    context.Add(project);
+
+                    context.SaveChanges();
+                    Response.Redirect("/Pages/Controls/Student/UpdateProjects.aspx");
                 }
-
-                project.ProjectMembers.Add(new ProjectMember()
-                {
-                    Project = project,
-                    Student = context.Student
-                                     .Single(s => s.ID == CurrentStudent.ID),
-                    Role = "Leader",
-                    Reflection = txtReflections.Text
-                });
-                context.Add(project);
-
-                context.SaveChanges();
-                Response.Redirect("/Pages/Controls/Student/UpdateProjects.aspx");
             }
         }
     }
