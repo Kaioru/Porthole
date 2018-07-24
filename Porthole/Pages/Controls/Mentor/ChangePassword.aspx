@@ -38,7 +38,7 @@
                 ControlToValidate="txtNewPassword"
                 ErrorMessage="new password is required">&nbsp;
             </asp:RequiredFieldValidator>
-                <asp:RequiredFieldValidator runat="server" 
+            <asp:RequiredFieldValidator runat="server" 
                 ControlToValidate="txtNewPassword2"
                 ErrorMessage="repeat password is required">&nbsp;
             </asp:RequiredFieldValidator>
