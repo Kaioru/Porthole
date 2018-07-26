@@ -5,7 +5,7 @@
             {%>
             <%foreach (var request in ViewingRequests)
                 {%>
-            <hr />
+        <div class="divider"></div>
             <div class="tile">
                 <div class="tile-content">
                     <p class="tile-title"><%= request.StudentName %> </p>
