@@ -25,8 +25,8 @@ namespace Porthole.Pages.Controls.Mentor {
 		
 		protected System.Web.UI.WebControls.CustomValidator CustomValidator2;
 		
-		protected System.Web.UI.WebControls.Label lblInfo;
-		
 		protected System.Web.UI.WebControls.Button btnSubmit;
+		
+		protected System.Web.UI.WebControls.Label lblInfo;
 	}
 }

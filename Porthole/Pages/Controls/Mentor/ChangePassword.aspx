@@ -55,13 +55,13 @@
             <asp:ValidationSummary runat="server" />
         </div>
 
-        <div class="form-group">
-            <asp:Label runat="server" id="lblInfo" />
-        </div>
-
         <div class="text-right">
             <button class="btn">reset</button>
             <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" id="lblInfo" />
         </div>
     </form>
 </div>
