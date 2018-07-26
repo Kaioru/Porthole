@@ -29,9 +29,39 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtPassword"
+                ErrorMessage="password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtNewPassword"
+                ErrorMessage="new password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtNewPassword2"
+                ErrorMessage="repeat password is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <asp:CustomValidator id="CustomValidator1" runat="server" 
+                OnServerValidate="PasswordValidate" 
+                ControlToValidate="txtNewPassword" 
+                ErrorMessage="passwords not the same">&nbsp;
+            </asp:CustomValidator>
+            <asp:CustomValidator id="CustomValidator2" runat="server" 
+                OnServerValidate="Password2Validate" 
+                ControlToValidate="txtNewPassword" 
+                ErrorMessage="current password incorrect">&nbsp;
+            </asp:CustomValidator>
+            <asp:ValidationSummary runat="server" />
+        </div>
+
         <div class="text-right">
             <button class="btn">reset</button>
             <asp:Button runat="server" id="btnSubmit" OnClick="btnSubmit_Click" class="btn btn-primary" Text="submit" />
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" id="lblInfo" />
         </div>
     </form>
 </div>

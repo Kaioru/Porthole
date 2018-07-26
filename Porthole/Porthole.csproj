@@ -204,6 +204,10 @@
     <Content Include="Pages\Controls\Mentor\ChangePassword.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\Controls\Student\ViewSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\UpdateSuggestions.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewMessages.aspx" />
+    <Content Include="Pages\Controls\Mentor\ViewMessage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -446,6 +450,32 @@
     <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.designer.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.designer.cs">
+      <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.cs">
+      <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.designer.cs">
+      <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.designer.cs">
+      <DependentUpon>ViewMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.designer.cs">
+      <DependentUpon>ViewMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Reply.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

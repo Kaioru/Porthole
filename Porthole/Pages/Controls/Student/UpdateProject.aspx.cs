@@ -89,60 +89,63 @@ namespace Porthole.Pages.Controls.Student
 
         public void btnSubmit_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Project project = context.Project
-                    .Include(p => p.ProjectMembers)
-                    .ThenInclude(m => m.Student)
-                    .Single(s => s.ID == CurrentProject.ID);
-
-                project.Title = txtTitle.Text;
-                project.Description = txtDescription.Text;
-                project.URL = txtURL.Text;
-
-                if (fuPoster.HasFile)
+                using (var context = new DatabaseContext())
                 {
-                    try
-                    {
-                        string filename = Guid.NewGuid().ToString() + Path.GetExtension(fuPoster.FileName);
-                        fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
-                        project.Poster = filename;
-                    }
-                    catch (Exception)
-                    {
+                    Models.Project project = context.Project
+                        .Include(p => p.ProjectMembers)
+                        .ThenInclude(m => m.Student)
+                        .Single(s => s.ID == CurrentProject.ID);
 
-                    }
-                }
+                    project.Title = txtTitle.Text;
+                    project.Description = txtDescription.Text;
+                    project.URL = txtURL.Text;
 
-                project.ProjectMembers.Clear();
-                foreach (ListItem item in cblCollaborators.Items)
-                {
-                    if (item.Selected)
+                    if (fuPoster.HasFile)
                     {
-                        project.ProjectMembers.Add(new ProjectMember()
+                        try
                         {
-                            Project = project,
-                            Student = context.Student
-                                             .Single(s => s.ID == Convert.ToInt32(item.Value)),
-                            Role = "Member"
-                        });
+                            string filename = Guid.NewGuid().ToString() + Path.GetExtension(fuPoster.FileName);
+                            fuPoster.SaveAs(Server.MapPath("/Content/Posters/") + filename);
+                            project.Poster = filename;
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
+
+                    project.ProjectMembers.Clear();
+                    foreach (ListItem item in cblCollaborators.Items)
+                    {
+                        if (item.Selected)
+                        {
+                            project.ProjectMembers.Add(new ProjectMember()
+                            {
+                                Project = project,
+                                Student = context.Student
+                                                 .Single(s => s.ID == Convert.ToInt32(item.Value)),
+                                Role = "Member"
+                            });
+                        }
+                    }
+                    project.ProjectMembers.Add(new ProjectMember()
+                    {
+                        Project = project,
+                        Student = context.Student
+                                         .Single(s => s.ID == CurrentStudent.ID),
+                        Role = "Leader",
+                        Reflection = txtReflections.Text
+                    });
+
+                    context.SaveChanges();
+
+                    CurrentProject = project;
+                    Reset();
+                    lblInfo.CssClass = "text-success";
+                    lblInfo.Text = "huzzah, we've updated your project!";
                 }
-                project.ProjectMembers.Add(new ProjectMember()
-                {
-                    Project = project,
-                    Student = context.Student
-                                     .Single(s => s.ID == CurrentStudent.ID),
-                    Role = "Leader",
-                    Reflection = txtReflections.Text
-                });
-
-                context.SaveChanges();
-
-                CurrentProject = project;
-                Reset();
-                lblInfo.CssClass = "text-success";
-                lblInfo.Text = "huzzah, we've updated your project!";
             }
         }
     }

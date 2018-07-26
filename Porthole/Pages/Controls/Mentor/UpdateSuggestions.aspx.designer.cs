@@ -11,22 +11,12 @@
 namespace Porthole.Pages.Controls.Mentor {
 	
 	
-	public partial class ChangePassword {
+	public partial class UpdateSuggestions {
 		
 		protected System.Web.UI.WebControls.Content Content1;
 		
-		protected System.Web.UI.WebControls.TextBox txtPassword;
+		protected System.Web.UI.WebControls.TextBox txtInput;
 		
-		protected System.Web.UI.WebControls.TextBox txtNewPassword;
-		
-		protected System.Web.UI.WebControls.TextBox txtNewPassword2;
-		
-		protected System.Web.UI.WebControls.CustomValidator CustomValidator1;
-		
-		protected System.Web.UI.WebControls.CustomValidator CustomValidator2;
-		
-		protected System.Web.UI.WebControls.Button btnSubmit;
-		
-		protected System.Web.UI.WebControls.Label lblInfo;
+		protected System.Web.UI.WebControls.Button btnSend;
 	}
 }
