@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProfile" CodeBehind="~/UpdateProfile.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProfile" CodeBehind="UpdateProfile.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">

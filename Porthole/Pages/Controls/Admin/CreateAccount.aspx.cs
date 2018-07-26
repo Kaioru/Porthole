@@ -14,6 +14,8 @@ namespace Porthole.Pages.Controls.Admin
         {
             if (!IsPostBack)
             {
+                rblAccountType.Items.Add("Mentor");
+                rblAccountType.Items.Add("Student");
                 using (var context = new DatabaseContext())
                 {
                     List<Models.Mentor> mentorList = context.Mentor.ToList();
@@ -28,10 +30,10 @@ namespace Porthole.Pages.Controls.Admin
 
         protected void btnCreate_Click(object sender, EventArgs e)
         {
-
+            string type = rblAccountType.SelectedValue;
             using (var context = new DatabaseContext())
             {
-                if (rbMentor.Checked)
+                if (type == "Mentor")
                 {
                     Models.Mentor mentor = new Models.Mentor()
                     {
@@ -60,16 +62,18 @@ namespace Porthole.Pages.Controls.Admin
 
         }
 
-        protected void rbMentor_CheckedChanged(object sender, EventArgs e)
+        protected void rblAccountType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblMentor.Visible = !rbMentor.Checked;
-            ddlMentor.Visible = !rbMentor.Checked;
-        }
-
-        protected void rbStudent_CheckedChanged(object sender, EventArgs e)
-        {
-            lblMentor.Visible = !rbMentor.Checked;
-            ddlMentor.Visible = !rbMentor.Checked;
+            if (rblAccountType.SelectedValue == "Mentor")
+            {
+                lblMentor.Visible = false;
+                ddlMentor.Visible = false;
+            }
+            else
+            {
+                lblMentor.Visible = true;
+                ddlMentor.Visible = true;
+            }
         }
     }
 }

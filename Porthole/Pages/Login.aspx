@@ -20,7 +20,6 @@
                     <asp:TextBox runat="server" class="form-input" TextMode="Password" id="txtPassword" placeholder="the one you dont share"></asp:TextBox>
                 </div>
             </div>
-
             <a href="/Pages/Register.aspx">are you a parent? register here!</a>
 
             <div class="form-group columns">

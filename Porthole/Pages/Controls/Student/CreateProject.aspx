@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.CreateProject" CodeBehind="~/CreateProject.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.CreateProject" CodeBehind="CreateProject.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
@@ -75,25 +75,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <asp:RequiredFieldValidator runat="server" 
-                    ControlToValidate="txtTitle"
-                    ErrorMessage="title is required">&nbsp;
-                </asp:RequiredFieldValidator>
-                <asp:RequiredFieldValidator runat="server" 
-                    ControlToValidate="txtDescription"
-                    ErrorMessage="description is required">&nbsp;
-                </asp:RequiredFieldValidator>
-                <asp:RequiredFieldValidator runat="server" 
-                    ControlToValidate="txtURL"
-                    ErrorMessage="url is required">&nbsp;
-                </asp:RequiredFieldValidator>
-                <asp:RequiredFieldValidator runat="server" 
-                    ControlToValidate="txtReflections"
-                    ErrorMessage="reflections is required">&nbsp;
-                </asp:RequiredFieldValidator>
-                <asp:ValidationSummary runat="server" />
-            </div>
+            
 
             <div class="text-right">
                 <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />
