@@ -42,14 +42,21 @@
                 ControlToValidate="txtNewPassword2"
                 ErrorMessage="repeat password is required">&nbsp;
             </asp:RequiredFieldValidator>
-            <!-- TODO: Fix this -->
-            <asp:CompareValidator
-                    ControlToValidate="txtNewPassword2"
-                    ControlToCompare="txtNewPassword"
-                    Operator="Equal"
-                    ErrorMessage="new passwords do not match">&nbsp;
-            </asp:CompareValidator>
+            <asp:CustomValidator id="CustomValidator1" runat="server" 
+                OnServerValidate="PasswordValidate" 
+                ControlToValidate="txtNewPassword" 
+                ErrorMessage="passwords not the same">&nbsp;
+            </asp:CustomValidator>
+            <asp:CustomValidator id="CustomValidator2" runat="server" 
+                OnServerValidate="Password2Validate" 
+                ControlToValidate="txtNewPassword" 
+                ErrorMessage="current password incorrect">&nbsp;
+            </asp:CustomValidator>
             <asp:ValidationSummary runat="server" />
+        </div>
+
+        <div class="form-group">
+            <asp:Label runat="server" id="lblInfo" />
         </div>
 
         <div class="text-right">
