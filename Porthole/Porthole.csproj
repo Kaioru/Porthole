@@ -159,7 +159,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Pages\Controls\Admin\UpdateStatus.aspx" />
     <Content Include="Pages\Controls\Admin\ViewRequest.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
@@ -208,7 +207,6 @@
     <Content Include="Pages\Controls\Mentor\UpdateSuggestions.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessages.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessage.aspx" />
-    <Content Include="Pages\Errors\DefaultError.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -225,13 +223,6 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
-    <Compile Include="Pages\Controls\Admin\UpdateStatus.aspx.cs">
-      <DependentUpon>UpdateStatus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Controls\Admin\UpdateStatus.aspx.designer.cs">
-      <DependentUpon>UpdateStatus.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Controls\Admin\ViewRequest.aspx.cs">
       <DependentUpon>ViewRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -453,36 +444,34 @@
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.designer.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.cs">
       <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.designer.cs">
       <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.cs">
       <DependentUpon>ViewMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.designer.cs">
       <DependentUpon>ViewMessages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.cs">
       <DependentUpon>ViewMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.designer.cs">
       <DependentUpon>ViewMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Reply.cs" />
-    <Compile Include="Pages\Errors\DefaultError.aspx.cs">
-      <DependentUpon>DefaultError.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Errors\DefaultError.aspx.designer.cs">
-      <DependentUpon>DefaultError.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -496,9 +485,6 @@
     <None Include="Content\Posters\.gitkeep" />
     <None Include="Content\Chips\.gitkeep" />
     <None Include="Content\Avatars\.gitkeep" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Errors\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

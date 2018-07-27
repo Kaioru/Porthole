@@ -22,22 +22,13 @@ namespace Porthole.Pages.Controls.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlForm fCreateAcc;
         
         /// <summary>
-        /// rbMentor control.
+        /// rblAccountType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbMentor;
-        
-        /// <summary>
-        /// rbStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbStudent;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblAccountType;
         
         /// <summary>
         /// txtName control.
@@ -56,6 +47,15 @@ namespace Porthole.Pages.Controls.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
         
         /// <summary>
         /// txtPassword control.

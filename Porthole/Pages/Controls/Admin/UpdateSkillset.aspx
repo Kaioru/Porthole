@@ -9,6 +9,10 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:TextBox runat="server" class="form-input" id="txtNewSkillName" placeholder="Name"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="txtNewSkillName"
+                        ErrorMessage="Name is required">&nbsp;
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="form-group">

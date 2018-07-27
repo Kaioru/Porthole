@@ -9,6 +9,10 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:FileUpload ID="fuLogo" runat="server" placeholder="Logo"/>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="fuLogo"
+                        ErrorMessage="New profile picture is required">&nbsp;
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 
