@@ -32,6 +32,19 @@ namespace Porthole.Pages.Controls.Mentor
             }
         }
 
+        protected void Password3Validate(object source, ServerValidateEventArgs args)
+        {
+            bool hasDigit = false;
+            bool hasLength = txtPassword.Text.Length >= 8;
+
+            foreach (var c in txtPassword.Text)
+            {
+                if (!hasDigit && Char.IsDigit(c)) hasDigit = true;
+            }
+
+            args.IsValid = hasDigit & hasLength;
+        }
+
         public void btnSubmit_Click(Object sender, EventArgs e)
         {
             if (Page.IsValid)
