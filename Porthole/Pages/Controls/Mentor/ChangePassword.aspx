@@ -52,6 +52,11 @@
                 ControlToValidate="txtNewPassword" 
                 ErrorMessage="current password incorrect">&nbsp;
             </asp:CustomValidator>
+            <asp:CustomValidator id="CustomValidator2" runat="server" 
+                OnServerValidate="Password3Validate" 
+                ControlToValidate="txtNewPassword" 
+                ErrorMessage="password not at least 8 characters long and contain a digit">&nbsp;
+            </asp:CustomValidator>
             <asp:ValidationSummary runat="server" />
         </div>
 
