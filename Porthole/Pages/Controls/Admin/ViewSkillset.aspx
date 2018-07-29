@@ -50,7 +50,6 @@
                 </div>
                 <div class="divider"></div>
             <% } %>
-            </div>
         <% } %>
     <% } else { %>
         <div class="empty">
@@ -62,10 +61,6 @@
         </div>
     <% } %>
 <% } %>
-
-
-
-
     <div class="tile">
         <div class="tile-icon">
             <div class="example-tile-icon">
