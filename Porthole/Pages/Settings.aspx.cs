@@ -110,9 +110,17 @@ namespace Porthole.Pages
                 this.Options.Add(new SettingsOption
                 {
                     Icon = "",
-                    Option = "view messages",
-                    Redirect = "" // Pending Advance 
+                    Option = "send message",
+                    Redirect = "Controls/Parent/Selection.aspx" // Send Message (Message Table)
                 });
+                this.Options.Add(new SettingsOption
+                {
+                    Icon = "",
+                    Option = "send reply",
+                    Redirect = "Controls/Parent/Reply.aspx" // Send Reply (Reply Table)
+                });
+
+
             }
         }
 

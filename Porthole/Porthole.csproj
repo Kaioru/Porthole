@@ -159,6 +159,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Controls\Parent\Messages.aspx" />
+    <Content Include="Pages\Controls\Parent\Reply.aspx" />
+    <Content Include="Pages\Controls\Parent\Selection.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
     <Content Include="Pages\Controls\Admin\CreateSkillset.aspx" />
@@ -222,6 +225,27 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
+    <Compile Include="Pages\Controls\Parent\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Reply.aspx.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Reply.aspx.designer.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Selection.aspx.cs">
+      <DependentUpon>Selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Selection.aspx.designer.cs">
+      <DependentUpon>Selection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,54 +425,63 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Pages\Controls\Mentor\PublicizeStudent.aspx.cs">
       <DependentUpon>PublicizeStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\PublicizeStudent.aspx.designer.cs">
       <DependentUpon>PublicizeStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\SearchStudents.aspx.cs">
       <DependentUpon>SearchStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\SearchStudents.aspx.designer.cs">
       <DependentUpon>SearchStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Student\ViewSuggestions.aspx.designer.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewSuggestions.aspx.designer.cs">
       <DependentUpon>ViewSuggestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.cs">
       <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\UpdateSuggestions.aspx.designer.cs">
       <DependentUpon>UpdateSuggestions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.cs">
       <DependentUpon>ViewMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessages.aspx.designer.cs">
       <DependentUpon>ViewMessages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.cs">
       <DependentUpon>ViewMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Controls\Mentor\ViewMessage.aspx.designer.cs">
       <DependentUpon>ViewMessage.aspx</DependentUpon>
