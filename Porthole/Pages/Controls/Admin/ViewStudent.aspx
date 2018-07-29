@@ -4,7 +4,7 @@
     <div class="container">
         <% foreach (var student in studentList)
             { %>
-        <hr />
+        <div class="divider"></div>
         <div class="tile">
             <div class="tile-icon">
                 <figure class="avatar avatar-md" data-initial="<%= student.Initials %>">
@@ -15,7 +15,7 @@
                 <p class="tile-title"><%= student.Name %></p>
             </div>
             <div class="tile-action">
-                <a href="UpdateProfile.aspx?id=<%= student.ID %>" class="btn bg-primary">
+                <a href="UpdateProfile.aspx?id=<%= student.ID %>" class="btn">
                     <i class="icon icon-edit"></i>
                 </a>
             </div>
@@ -23,6 +23,6 @@
         
         <br />
         <%} %>
-        <hr />
+        <div class="divider"></div>
     </div>
 </asp:Content>

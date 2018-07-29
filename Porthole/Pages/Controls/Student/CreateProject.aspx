@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.CreateProject" CodeBehind="~/CreateProject.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.CreateProject" CodeBehind="CreateProject.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
@@ -74,6 +74,8 @@
                     <small class="text-gray">you add collaborators after creating the project.</small>
                 </div>
             </div>
+
+            
 
             <div class="text-right">
                 <asp:Button runat="server" id="btnReset" OnClick="btnReset_Click" class="btn" Text="reset" />

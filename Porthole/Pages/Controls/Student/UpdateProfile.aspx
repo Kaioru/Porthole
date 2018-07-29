@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProfile" CodeBehind="~/UpdateProfile.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="/Pages/Layouts/ControlTemplate.master" Inherits="Porthole.Pages.Controls.Student.UpdateProfile" CodeBehind="UpdateProfile.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphForm" Runat="server">
 <div class="tile tile-centered">
     <div class="tile-icon">
@@ -51,6 +51,22 @@
                         <asp:TextBox runat="server" class="form-input" id="txtURL" placeholder="webpage"></asp:TextBox>
                     </div>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtDescription"
+                    ErrorMessage="about me is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtAchievement"
+                    ErrorMessage="achievements is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator runat="server" 
+                    ControlToValidate="txtURL"
+                    ErrorMessage="url is required">&nbsp;
+                </asp:RequiredFieldValidator>
+                <asp:ValidationSummary runat="server" />
             </div>
 
             <div class="form-group columns">

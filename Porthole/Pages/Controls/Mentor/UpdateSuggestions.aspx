@@ -30,6 +30,11 @@
                     <asp:Button runat="server" id="btnSend" OnClick="btnSend_Click" class="btn btn-primary input-group-btn" Text="Send" />
                 </div>
             </form>
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtInput"
+                ErrorMessage="input is required">&nbsp;
+            </asp:RequiredFieldValidator>
+            <asp:ValidationSummary runat="server" />
         </div>
     </div>
 </div>

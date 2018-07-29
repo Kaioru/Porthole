@@ -7,11 +7,12 @@
                     <label class="form-label">Account type</label>
                 </div>
                 <div class="col-9 col-sm-12">
-                    <asp:RadioButton id="rbMentor" runat="server" GroupName="AccountType" Text="Mentor" OnCheckedChanged="rbMentor_CheckedChanged" AutoPostBack="true"/> 
-                    <asp:RadioButton id="rbStudent" runat="server" GroupName="AccountType" Text="Student" OnCheckedChanged="rbStudent_CheckedChanged" AutoPostBack="true"/>
+                    <asp:RadioButtonList ID="rblAccountType" runat="server" OnSelectedIndexChanged="rblAccountType_SelectedIndexChanged" RepeatDirection="Horizontal"></asp:RadioButtonList>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="rblAccountType"
+                        ErrorMessage="Specify account type">&nbsp;
+                    </asp:RequiredFieldValidator>
                     <br />
-                    
-                    
                 </div>
             </div>
             <div class="form-group">
@@ -20,6 +21,10 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:TextBox runat="server" class="form-input" id="txtName" placeholder="Name"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="txtName"
+                        ErrorMessage="Name is required">&nbsp;
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="form-group">
@@ -28,6 +33,11 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:TextBox runat="server" class="form-input" id="txtEmail" placeholder="Email"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="txtEmail"
+                        ErrorMessage="Email is required">&nbsp;
+                    </asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Please enter valid email" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
             </div>
             <div class="form-group">
@@ -36,6 +46,10 @@
                 </div>
                 <div class="col-9 col-sm-12">
                     <asp:TextBox runat="server" class="form-input" TextMode="Password" id="txtPassword" placeholder="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="txtPassword"
+                        ErrorMessage="Password is required">&nbsp;
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
                
@@ -47,6 +61,10 @@
                 <div class="col-9 col-sm-12" >
                     <asp:DropDownList class="form-select" id="ddlMentor" runat="server">
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="ddlMentor"
+                        ErrorMessage="Mentor is required">&nbsp;
+                    </asp:RequiredFieldValidator>
                 </div>
                 </div>
             <div class="form-group">
@@ -54,6 +72,9 @@
                 <div class="col-9 col-sm-12">
                     <asp:Button runat="server" id="btnCreate" class="btn btn-primary" Text="Create" OnClick="btnCreate_Click" />
                 </div>
+            </div>
+            <div class="form-group">
+                <asp:ValidationSummary runat="server" />
             </div>
         </form>
     </div>

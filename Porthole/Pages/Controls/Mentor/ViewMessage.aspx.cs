@@ -36,23 +36,26 @@ namespace Porthole.Pages.Controls.Mentor
 
         public void btnSend_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Reply reply = new Models.Reply
+                using (var context = new DatabaseContext())
                 {
-                    Text = txtInput.Text,
-                    Message = context.Message
-                                     .Single(m => m.ID == CurrentMessage.ID),
-                    Mentor = context.Mentor
-                                    .Single(m => m.ID == CurrentMentor.ID),
-                };
+                    Models.Reply reply = new Models.Reply
+                    {
+                        Text = txtInput.Text,
+                        Message = context.Message
+                                         .Single(m => m.ID == CurrentMessage.ID),
+                        Mentor = context.Mentor
+                                        .Single(m => m.ID == CurrentMentor.ID),
+                    };
 
-                context.Add(reply);
-                context.SaveChanges();
+                    context.Add(reply);
+                    context.SaveChanges();
+                }
+
+                txtInput.Text = String.Empty;
+                Reset();
             }
-
-            txtInput.Text = String.Empty;
-            Reset();
         }
     }
 }

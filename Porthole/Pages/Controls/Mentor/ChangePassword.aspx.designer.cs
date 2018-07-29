@@ -21,6 +21,12 @@ namespace Porthole.Pages.Controls.Mentor {
 		
 		protected System.Web.UI.WebControls.TextBox txtNewPassword2;
 		
+		protected System.Web.UI.WebControls.CustomValidator CustomValidator1;
+		
+		protected System.Web.UI.WebControls.CustomValidator CustomValidator2;
+		
 		protected System.Web.UI.WebControls.Button btnSubmit;
+		
+		protected System.Web.UI.WebControls.Label lblInfo;
 	}
 }

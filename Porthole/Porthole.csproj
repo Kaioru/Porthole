@@ -162,6 +162,7 @@
     <Content Include="Pages\Controls\Parent\Messages.aspx" />
     <Content Include="Pages\Controls\Parent\Reply.aspx" />
     <Content Include="Pages\Controls\Parent\Selection.aspx" />
+    <Content Include="Pages\Controls\Admin\ViewRequest.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
     <Content Include="Pages\Controls\Admin\CreateSkillset.aspx" />
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="Pages\Controls\Parent\Selection.aspx.designer.cs">
       <DependentUpon>Selection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewRequest.aspx.cs">
+      <DependentUpon>ViewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Admin\ViewRequest.aspx.designer.cs">
+      <DependentUpon>ViewRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Controls\Parent\SendRequest.aspx.cs">
       <DependentUpon>SendRequest.aspx</DependentUpon>

@@ -37,29 +37,32 @@ namespace Porthole.Pages.Controls.Mentor
 
         public void btnSend_Click(Object sender, EventArgs e)
         {
-            using (var context = new DatabaseContext())
+            if (Page.IsValid)
             {
-                Models.Suggestion suggestion = new Models.Suggestion
+                using (var context = new DatabaseContext())
                 {
-                    Description = txtInput.Text,
-                    Status = "N",
-                    Mentor = context.Mentor
-                                    .Single(m => m.ID == CurrentMentor.ID),
-                    Student = context.Student
-                                     .Single(m => m.ID == CurrentStudent.ID),
-                };
+                    Models.Suggestion suggestion = new Models.Suggestion
+                    {
+                        Description = txtInput.Text,
+                        Status = "N",
+                        Mentor = context.Mentor
+                                        .Single(m => m.ID == CurrentMentor.ID),
+                        Student = context.Student
+                                         .Single(m => m.ID == CurrentStudent.ID),
+                    };
 
-                var student = context.Student.Single(m => m.ID == CurrentStudent.ID);
+                    var student = context.Student.Single(m => m.ID == CurrentStudent.ID);
 
-                student.Status = "N";
-                context.Update(student);
+                    student.Status = "N";
+                    context.Update(student);
 
-                context.Add(suggestion);
-                context.SaveChanges();
+                    context.Add(suggestion);
+                    context.SaveChanges();
+                }
+
+                txtInput.Text = String.Empty;
+                Reset();
             }
-
-            txtInput.Text = String.Empty;
-            Reset();
         }
     }
 }
