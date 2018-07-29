@@ -7,7 +7,7 @@
                     <label class="form-label">Account type</label>
                 </div>
                 <div class="col-9 col-sm-12">
-                    <asp:RadioButtonList ID="rblAccountType" runat="server" OnSelectedIndexChanged="rblAccountType_SelectedIndexChanged" RepeatDirection="Horizontal"></asp:RadioButtonList>
+                    <asp:RadioButtonList ID="rblAccountType" runat="server" OnSelectedIndexChanged="rblAccountType_SelectedIndexChanged" RepeatDirection="Horizontal" AutoPostBack="True"></asp:RadioButtonList>
                     <asp:RequiredFieldValidator runat="server" 
                         ControlToValidate="rblAccountType"
                         ErrorMessage="Specify account type">&nbsp;
@@ -72,9 +72,6 @@
                 <div class="col-9 col-sm-12">
                     <asp:Button runat="server" id="btnCreate" class="btn btn-primary" Text="Create" OnClick="btnCreate_Click" />
                 </div>
-            </div>
-            <div class="form-group">
-                <asp:ValidationSummary runat="server" />
             </div>
         </form>
     </div>

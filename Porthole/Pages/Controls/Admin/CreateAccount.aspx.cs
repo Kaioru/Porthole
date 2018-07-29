@@ -10,16 +10,19 @@ namespace Porthole.Pages.Controls.Admin
 {
     public partial class CreateAccount : System.Web.UI.Page
     {
+        public List<Models.Mentor> mentorList { get; set; }
+        public List<Models.Student> studentList { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                rblAccountType.SelectedIndex = 0;
                 rblAccountType.Items.Add("Mentor");
                 rblAccountType.Items.Add("Student");
                 using (var context = new DatabaseContext())
                 {
-                    List<Models.Mentor> mentorList = context.Mentor.ToList();
-
+                    mentorList = context.Mentor.ToList();
+                    studentList = context.Student.ToList();
                     foreach (Models.Mentor m in mentorList)
                     {
                         ddlMentor.Items.Add(m.Name);
@@ -31,6 +34,7 @@ namespace Porthole.Pages.Controls.Admin
         protected void btnCreate_Click(object sender, EventArgs e)
         {
             string type = rblAccountType.SelectedValue;
+            lblMentor.Text = type;
             using (var context = new DatabaseContext())
             {
                 if (type == "Mentor")
@@ -44,7 +48,7 @@ namespace Porthole.Pages.Controls.Admin
                     context.Add(mentor);
                 }
 
-                else
+                if (type == "Student")
                 {
                     Models.Student student = new Models.Student()
                     {
@@ -54,8 +58,6 @@ namespace Porthole.Pages.Controls.Admin
                     };
                     context.Add(student);
                 }
-
-
                 context.SaveChanges();
                 Response.Redirect("/Pages/Settings.aspx");
             }
@@ -66,13 +68,13 @@ namespace Porthole.Pages.Controls.Admin
         {
             if (rblAccountType.SelectedValue == "Mentor")
             {
-                lblMentor.Visible = false;
                 ddlMentor.Visible = false;
+                lblMentor.Visible = false;
             }
             else
             {
-                lblMentor.Visible = true;
                 ddlMentor.Visible = true;
+                lblMentor.Visible = true;
             }
         }
     }
