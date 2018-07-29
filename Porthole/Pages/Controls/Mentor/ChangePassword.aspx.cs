@@ -35,14 +35,14 @@ namespace Porthole.Pages.Controls.Mentor
         protected void Password3Validate(object source, ServerValidateEventArgs args)
         {
             bool hasDigit = false;
-            bool hasLength = txtPassword.Text.Length >= 8;
+            bool hasLength = txtNewPassword.Text.Length >= 8;
 
-            foreach (var c in txtPassword.Text)
+            foreach (var c in txtNewPassword.Text)
             {
-                if (!hasDigit && Char.IsDigit(c)) hasDigit = true;
+                hasDigit |= Char.IsDigit(c);
             }
 
-            args.IsValid = hasDigit & hasLength;
+            args.IsValid = hasDigit && hasLength;
         }
 
         public void btnSubmit_Click(Object sender, EventArgs e)
