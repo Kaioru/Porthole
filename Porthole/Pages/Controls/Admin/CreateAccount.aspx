@@ -37,6 +37,7 @@
                         ControlToValidate="txtEmail"
                         ErrorMessage="Email is required">&nbsp;
                     </asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="Email already in use" onservervalidate="cvEmail_ServerValidate" ControlToValidate="txtEmail"></asp:CustomValidator>
                     <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Please enter valid email" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
             </div>

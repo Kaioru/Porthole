@@ -34,32 +34,34 @@ namespace Porthole.Pages.Controls.Admin
         protected void btnCreate_Click(object sender, EventArgs e)
         {
             string type = rblAccountType.SelectedValue;
-            lblMentor.Text = type;
             using (var context = new DatabaseContext())
             {
-                if (type == "Mentor")
+                if (Page.IsValid)
                 {
-                    Models.Mentor mentor = new Models.Mentor()
+                    if (type == "Mentor")
                     {
-                        Name = txtName.Text,
-                        EmailAddress = txtEmail.Text,
-                        Password = txtPassword.Text
-                    };
-                    context.Add(mentor);
-                }
+                        Models.Mentor mentor = new Models.Mentor()
+                        {
+                            Name = txtName.Text,
+                            EmailAddress = txtEmail.Text,
+                            Password = txtPassword.Text
+                        };
+                        context.Add(mentor);
+                    }
 
-                if (type == "Student")
-                {
-                    Models.Student student = new Models.Student()
+                    if (type == "Student")
                     {
-                        Name = txtName.Text,
-                        EmailAddress = txtEmail.Text,
-                        Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
-                    };
-                    context.Add(student);
+                        Models.Student student = new Models.Student()
+                        {
+                            Name = txtName.Text,
+                            EmailAddress = txtEmail.Text,
+                            Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
+                        };
+                        context.Add(student);
+                    }
+                    context.SaveChanges();
+                    Response.Redirect("/Pages/Settings.aspx");
                 }
-                context.SaveChanges();
-                Response.Redirect("/Pages/Settings.aspx");
             }
 
         }
@@ -75,6 +77,35 @@ namespace Porthole.Pages.Controls.Admin
             {
                 ddlMentor.Visible = true;
                 lblMentor.Visible = true;
+            }
+        }
+
+        protected void cvEmail_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            using (var context = new DatabaseContext())
+            {
+                mentorList = context.Mentor.ToList();
+                studentList = context.Student.ToList();
+            }
+            if (rblAccountType.SelectedValue == "Mentor")
+            {
+                foreach(var m in mentorList)
+                {
+                    if (txtEmail.Text == m.EmailAddress)
+                    {
+                        args.IsValid = false;
+                    }
+                }
+            }
+            else
+            {
+                foreach(var s in studentList)
+                {
+                    if (txtEmail.Text == s.EmailAddress)
+                    {
+                        args.IsValid = false;
+                    }
+                }
             }
         }
     }
