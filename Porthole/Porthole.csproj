@@ -210,6 +210,7 @@
     <Content Include="Pages\Controls\Mentor\UpdateSuggestions.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessages.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessage.aspx" />
+    <Content Include="Pages\Errors\DefaultError.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -496,6 +497,12 @@
     </Compile>
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Reply.cs" />
+    <Compile Include="Pages\Errors\DefaultError.aspx.cs">
+      <DependentUpon>DefaultError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Errors\DefaultError.aspx.designer.cs">
+      <DependentUpon>DefaultError.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
