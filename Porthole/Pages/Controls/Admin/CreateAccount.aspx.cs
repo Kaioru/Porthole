@@ -12,6 +12,7 @@ namespace Porthole.Pages.Controls.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            rblAccountType.SelectedIndex = 0;
             if (!IsPostBack)
             {
                 rblAccountType.Items.Add("Mentor");
@@ -50,6 +51,10 @@ namespace Porthole.Pages.Controls.Admin
                     {
                         Name = txtName.Text,
                         EmailAddress = txtEmail.Text,
+                        Password = txtPassword.Text,
+                        Course = txtCourse.Text,
+                        Status = "N",
+
                         Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
                     };
                     context.Add(student);
