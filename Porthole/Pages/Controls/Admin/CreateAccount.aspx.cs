@@ -51,15 +51,15 @@ namespace Porthole.Pages.Controls.Admin
 
                     if (type == "Student")
                     {
-                        Models.Student student = new Models.Student()
-                        {
-                            Name = txtName.Text,
-                            EmailAddress = txtEmail.Text,
-                            Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
-                        };
-                        context.Add(student);
-                    }
-                    context.SaveChanges();
+                        Name = txtName.Text,
+                        EmailAddress = txtEmail.Text,
+                        Password = txtPassword.Text,
+                        Course = txtCourse.Text,
+                        Status = "N",
+
+                        Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
+                    };
+                    context.Add(student);
                     Response.Redirect("/Pages/Settings.aspx");
                 }
             }

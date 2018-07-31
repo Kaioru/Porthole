@@ -53,6 +53,19 @@
                     </asp:RequiredFieldValidator>
                 </div>
             </div>
+
+            <div class="form-group">
+                <div class="col-3 col-sm-12">
+                    <label class="form-label" for="input-example-1">Course</label>
+                </div>
+                <div class="col-9 col-sm-12">
+                    <asp:TextBox runat="server" class="form-input" id="txtCourse" placeholder="Course"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" 
+                        ControlToValidate="txtCourse"
+                        ErrorMessage="Course is required">&nbsp;
+                    </asp:RequiredFieldValidator>
+                </div>
+            </div>
                
             <div class="form-group">
                 <div class="col-3 col-sm-12" style="height: 33px" >
