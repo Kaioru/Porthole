@@ -51,15 +51,16 @@ namespace Porthole.Pages.Controls.Admin
 
                     if (type == "Student")
                     {
-                        Name = txtName.Text,
-                        EmailAddress = txtEmail.Text,
-                        Password = txtPassword.Text,
-                        Course = txtCourse.Text,
-                        Status = "N",
+                        Models.Student student = new Models.Student();
+                        student.Name = txtName.Text;
+                        student.EmailAddress = txtEmail.Text;
+                        student.Password = txtPassword.Text;
+                        student.Course = txtCourse.Text;
+                        student.Status = "N";
 
-                        Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue))
+                        student.Mentor = context.Mentor.Single(m => m.Name.Equals(ddlMentor.SelectedValue));
+                        context.Add(student);
                     };
-                    context.Add(student);
                     Response.Redirect("/Pages/Settings.aspx");
                 }
             }
@@ -89,7 +90,7 @@ namespace Porthole.Pages.Controls.Admin
             }
             if (rblAccountType.SelectedValue == "Mentor")
             {
-                foreach(var m in mentorList)
+                foreach (var m in mentorList)
                 {
                     if (txtEmail.Text == m.EmailAddress)
                     {
@@ -99,7 +100,7 @@ namespace Porthole.Pages.Controls.Admin
             }
             else
             {
-                foreach(var s in studentList)
+                foreach (var s in studentList)
                 {
                     if (txtEmail.Text == s.EmailAddress)
                     {
