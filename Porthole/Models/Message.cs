@@ -11,18 +11,18 @@ namespace Porthole.Models
         [Column("MessageID")]
         public int ID { get; set; }
 
-        public string Title { get; set; }
-        public string Text { get; set; }
+        public string Title { get; set; } // Advance #1
+        public string Text { get; set; } // Advance #1
 
         [ForeignKey("ToID")]
-        public Mentor Mentor { get; set; }
+        public Mentor Mentor { get; set; } // Advnace #1
         [ForeignKey("FromID")]
-        public Parent Parent { get; set; }
+        public Parent Parent { get; set; }// Advacne #1
 
         [Column("DateTimePosted")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)] // Automatically created
         public DateTime DateCreated { get; set; }
 
-        public ICollection<Reply> Replies { get; set; }
+        public ICollection<Reply> Replies { get; set; } // To use when responding to mentor's reply
     }
 }

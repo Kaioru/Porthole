@@ -4,7 +4,7 @@
     <form id="form1" runat="server">   
         <div class="form-group">
             <label class="form-label" for="'input-name">Name of Student: </label>
-            <asp:TextBox ID="StudName" class="form-input" runat="server"></asp:TextBox>
+            <asp:TextBox ID="StudName" placeholder="Enter student name" class="form-input" runat="server"></asp:TextBox>
         </div>
 
         <div class="form-group">

@@ -222,6 +222,24 @@ namespace Porthole.Pages.Layouts
                 Page = "/Pages/Controls/Parent/SendRequest.aspx",
                 Previous = settings
             });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "send message",
+                Page = "/Pages/Controls/Parent/Selection.aspx",
+                Previous = settings
+            });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "send message",
+                Page = "/Pages/Controls/Parent/Messages.aspx",
+                Previous = settings
+            });
+            this.Crumbs.Add(new Crumb
+            {
+                Title = "reply message",
+                Page = "/Pages/Controls/Parent/Reply.aspx",
+                Previous = settings
+            });
         }
 
         protected void Page_Load(object sender, EventArgs e)

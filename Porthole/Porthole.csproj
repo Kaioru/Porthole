@@ -159,6 +159,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Controls\Parent\Messages.aspx" />
+    <Content Include="Pages\Controls\Parent\Reply.aspx" />
+    <Content Include="Pages\Controls\Parent\Selection.aspx" />
     <Content Include="Pages\Controls\Admin\ViewRequest.aspx" />
     <Content Include="Pages\Controls\Parent\SendRequest.aspx" />
     <Content Include="Pages\Controls\Admin\CreateAccount.aspx" />
@@ -207,6 +210,7 @@
     <Content Include="Pages\Controls\Mentor\UpdateSuggestions.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessages.aspx" />
     <Content Include="Pages\Controls\Mentor\ViewMessage.aspx" />
+    <Content Include="Pages\Errors\DefaultError.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -223,6 +227,27 @@
     <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\ViewingRequest.cs" />
     <Compile Include="Models\IAccount.cs" />
+    <Compile Include="Pages\Controls\Parent\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Reply.aspx.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Reply.aspx.designer.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Selection.aspx.cs">
+      <DependentUpon>Selection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controls\Parent\Selection.aspx.designer.cs">
+      <DependentUpon>Selection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Controls\Admin\ViewRequest.aspx.cs">
       <DependentUpon>ViewRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -472,6 +497,12 @@
     </Compile>
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Reply.cs" />
+    <Compile Include="Pages\Errors\DefaultError.aspx.cs">
+      <DependentUpon>DefaultError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Errors\DefaultError.aspx.designer.cs">
+      <DependentUpon>DefaultError.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
